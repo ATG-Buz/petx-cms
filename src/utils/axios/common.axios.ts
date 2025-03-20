@@ -22,31 +22,18 @@ commonAxios.interceptors.request.use(
     switch ((req.method as string).toUpperCase()) {
       case "GET": {
         req.params = req.params || {};
-        // Object.assign(req.params, {});
         break;
       }
       case "POST": {
         if (!(req.data ) && !!req.data) {
           req.data = commonHelpers.formatFormData(req.data);
         }
-
-        // if (req.data instanceof FormData) {
-        // } else {
-        //   req.data = req.data || {};
-        //   // Object.assign(req.params, {});
-        // }
         break;
       }
       case "PUT": {
         if (!(req.data instanceof FormData) && !!req.data) {
           req.data = commonHelpers.formatFormData(req.data);
         }
-        // if (req.data instanceof FormData) {
-        //   // req.data.append("language", window.NextPublic.lang);
-        // } else {
-        //   req.data = req.data || {};
-        //   // Object.assign(req.params, {});
-        // }
         break;
       }
     }
@@ -60,19 +47,11 @@ commonAxios.interceptors.request.use(
 
 commonAxios.interceptors.response.use(
   (res) => {
-    // if (!["", null, undefined].includes(res?.data?.error_code)) {
-    // 	// helpers.axios.allocateRoute(res.data.error_code)
-    // }
     return res;
   },
   (err) => {
-    // console.log(err);
     const { status, data } = err.response;
     if (status === 401) {
-      // toast.error("error unauthorized")
-      // alert('Login session is expired!')
-      // localStorage.removeItem('token-metro')
-      // gotoPage('/signIn')
     }
     else if (data && data.message) {
       toast.error(data.message);

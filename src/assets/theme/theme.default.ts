@@ -1,7 +1,6 @@
 import { createTheme } from "@mui/material/styles"
 import { TypographyOptions } from "@mui/material/styles/createTypography"
 
-import generalStyles from "./general.styles"
 import overridesStyles from "./overrides.styles"
 import customStyles from "./custom.styles"
 
@@ -107,7 +106,6 @@ const defaultTheme = createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: (themeParams: any) => `
-				${generalStyles(themeParams)}
 				${overridesStyles(themeParams)}
         ${customStyles(themeParams)}
 			`,
