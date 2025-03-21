@@ -22,7 +22,6 @@ import { createTheme, ThemeProvider } from "@mui/material/styles"
 import { viVN } from '@mui/material/locale'
 import LoadingScreenOverlay from "@/components/LoadingScreenOverlay"
 import ErrorBoundary from "@/components/ErrorBoundary"
-import AlertDialog from "@/components/AlertDialog"
 import RouterLoadingLinearProgress from "@/components/RouterLoadingLinearProgress"
 
 import { useTranslation } from "next-i18next"
@@ -65,26 +64,16 @@ const openSans = Open_Sans({
   variable: "--font-open-sans",
 })
 
-// const BebasKai = localFont({
-//   src: [
-//     {
-//       path: '../assets/fonts/BebasNeue-Regular.ttf',
-//       weight: '400',
-//       style: 'normal',
-//     },
-//     {
-//       path: '../assets/fonts/BebasNeue-Regular.ttf',
-//       weight: '500',
-//       style: 'normal',
-//     },
-//     {
-//       path: '../assets/fonts/BebasNeue-Regular.ttf',
-//       weight: '700',
-//       style: 'normal',
-//     },
-//   ],
-//   variable: "--font-bebaskai"
-// })
+const BebasNeue = localFont({
+  src: [
+    {
+      path: '../assets/fonts/BebasNeue-Regular.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: "--font-bebasneue"
+})
 const clientSideEmotionCacheMui = createEmotionCacheMui()
 const clientSideEmotionCacheApp = createEmotionCacheApp()
 
@@ -180,23 +169,17 @@ const MyApp: React.FunctionComponent<MyAppProps> = props => {
           siteName: commonConfig.DOCUMENT_TITLE,
         }}
       />
-      {/* <style jsx global>{`
-        html {
-          font-family: ${openSans.style.fontFamily},
-            ${BebasKai.style.fontFamily};
-        }
-      `}</style> */}
       <style jsx global>{`
         html {
           font-family: ${openSans.style.fontFamily},
+            ${BebasNeue.style.fontFamily};;
         }
       `}</style>
       <CacheProvider value={emotionCacheMui}>
         <TssCacheProvider value={emotionCacheApp}>
           <ThemeProvider theme={themeWithLocale}>
             <AOSProvider>
-              {/* <main className={`${BebasKai.variable}`}> */}
-              <main >
+              <main className={`${BebasNeue.variable}`}>
                 <RouterLoadingLinearProgress />
                 <CssBaseline />
                 <InitializeMyApp />
@@ -205,7 +188,6 @@ const MyApp: React.FunctionComponent<MyAppProps> = props => {
                     translation,
                   })}
                 </ErrorBoundary>
-                <AlertDialog />
                 <LoadingScreenOverlay />
                 <ToastContainer
                   position="top-right"

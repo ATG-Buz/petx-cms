@@ -9,13 +9,13 @@ import { toast } from 'react-toastify';
 import { i18n } from 'next-i18next';
 
 const commonAxios = axios.create({
-  baseURL: 'http://dev-vn.vtl-lab.com:8296/',
+  baseURL: commonConfig.API_HOST,
 });
 
 commonAxios.interceptors.request.use(
   (req) => {
     if (!req['headers'].Language) {
-      const language = "en_US";
+      const language = "vi";
       req['headers'].Language = language;
     }
 

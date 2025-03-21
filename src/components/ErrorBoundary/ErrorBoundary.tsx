@@ -1,4 +1,3 @@
-import AppButton from "@/components/AppButton"
 import AppContainer from "@/components/AppContainer"
 import AppLink from "@/components/AppLink"
 import { storageService } from "@/services"
@@ -65,13 +64,6 @@ class ErrorBoundary extends Component<Props, State> {
                   {t("Or")}
                 </Typography>
               </div>
-              <AppButton
-                variant="contained"
-                color="primary"
-                component={AppLink}
-                href="/">
-                {t("Go to home")}
-              </AppButton>
             </div>
           </AppContainer>
         </div>
