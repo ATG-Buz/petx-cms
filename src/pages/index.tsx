@@ -7,7 +7,7 @@ import LayoutMain from "@/layouts/Main"
 import type { NextPageWithLayout } from "@/pages/_app"
 import type { GetStaticProps } from "next"
 
-const ViewHome = dynamic(() => import("@/views/Home"), {
+const ViewHome = dynamic(() => import("@/views/HomePage"), {
   suspense: true,
   ssr: false,
 })
