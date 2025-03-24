@@ -31,21 +31,18 @@ const useStyles = makeStyles({
       display: "flex",
       flexDirection: "column",
       justifyContent: 'flex-start',
-      height: "calc(var(--1dvh, 1vh) * 100)",
       backgroundColor: 'rgba(244, 244, 244, 1)',
-      [theme.breakpoints.between(0, 1201)]: {
-        display: 'none'
-      },
+      overflow: 'auto',
+      position: 'relative',
+      width: '100%',
       [theme.breakpoints.up(1200)]: {
-        overflow: 'hidden',
-        position: 'fixed',
+        overflow: 'auto',
+        position: 'relative',
         width: '100%',
       }
     },
     content1: {
-      marginTop: "10%",
       padding: 10,
-      height: "50%",
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
@@ -58,7 +55,6 @@ const useStyles = makeStyles({
         flexBasis: '100%',
       },
       [theme.breakpoints.between(1200, 1700)]: {
-        // overflow: 'auto',
         position: 'absolute',
         marginLeft: '20.8%',
         width: '100%',
@@ -67,7 +63,6 @@ const useStyles = makeStyles({
         backgroundColor: 'rgba(245, 245, 245, 1)'
       },
       [theme.breakpoints.up(1700)]: {
-        // overflow: 'auto',
         position: 'absolute',
         marginLeft: '20.85%',
         width: '100%',
@@ -88,6 +83,14 @@ const useStyles = makeStyles({
     icon_hidden: {
       boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
       cursor: 'pointer'
+    },
+    contentMenuChild: {
+      width: '100%',
+      alignItems: 'flex-end',
+      alignSelf: 'flex-end',
+      display: 'flex',
+      flexDirection: 'column',
+      marginTop: '12px',
     }
   }
 })

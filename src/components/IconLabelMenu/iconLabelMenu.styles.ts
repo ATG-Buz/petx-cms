@@ -1,11 +1,4 @@
-import { commonHelpers } from "@/utils/helpers"
-import { keyframes } from "tss-react"
 import { makeStyles } from "tss-react/mui"
-
-const subtractRestHorizontalSizePercent = 199
-const subtractSlopeHorizontalSizePercent = 207
-const standardWidth = 1920
-const standardHeight = 1080
 
 const useStyles = makeStyles({
   name: "iconLabelMenu",
@@ -15,16 +8,16 @@ const useStyles = makeStyles({
       display: 'flex',
       flexDirection: "row",
       justifyContent: "flex-start",
-      alignItems: "end",
+      alignItems: "center",
       cursor: "pointer",
     },
     activeContainer: {
       display: 'flex',
       flexDirection: "row",
       justifyContent: "flex-start",
-      alignItems: "end",
-      paddingLeft: 20,
-      paddingRight: 20,
+      alignItems: "center",
+      // paddingLeft: 20,
+      // paddingRight: 20,
       backgroundColor: "rgba(243, 112, 33, 1)",
       borderRadius: 48,
       cursor: "pointer"
@@ -47,7 +40,7 @@ const useStyles = makeStyles({
       fontFamily: "Open Sans, sans-serif",
       fontSize: "14px",
       fontWeight: "400",
-      lineHeight: "32px",
+      lineHeight: "24px",
     },
     activeTitleH3: {
       textTransform: "uppercase",
@@ -56,14 +49,14 @@ const useStyles = makeStyles({
       fontFamily: "Open Sans, sans-serif",
       fontSize: "14px",
       fontWeight: "400",
-      lineHeight: "32px",
+      lineHeight: "24px",
     },
     content1: {
-      width: "30%",
+      width: "10%",
       margin: 'auto',
     },
     activeContent1: {
-      width: "30%",
+      width: "10%",
       margin: 'auto',
       color: 'white',
       display: 'flex',
@@ -72,12 +65,12 @@ const useStyles = makeStyles({
       alignItems: 'center',
     },
     content2: {
-      width: "70%",
+      width: "90%",
       margin: 'auto',
-      paddingTop: 12,
-      paddingBottom: 12,
+      paddingTop: 8,
+      paddingBottom: 8,
       [theme.breakpoints.up(1200)]: {
-        width: "80%",
+        width: "90%",
       },
     },
   }
