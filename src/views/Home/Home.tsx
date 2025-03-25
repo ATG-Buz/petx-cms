@@ -43,7 +43,7 @@ const Home = (props: MenuLeftType) => {
 
   return (
     <Grid container className={cx(classes.root)}>
-      <Grid container rowSpacing={0} className={classes.content4} style={{ overflow: 'hidden' }}>
+      <Grid container xs={12} rowSpacing={0} className={classes.content4} style={{ overflow: 'visible' }}>
         <Grid item xs={isShowMenuLeft ? 2 : 0.3} className={classes.containerGird}>
           <div className={classes.content_icon}>
             {isShowMenuLeft && <ArrowBackIcon className={classes.icon_hidden} onClick={() => setIsShowMenuLeft(false)} />}
@@ -85,7 +85,7 @@ const Home = (props: MenuLeftType) => {
             ))}
           </div>
         </Grid>
-        <Grid item xs={isShowMenuLeft ? 10 : 12} className={classes.containerChild} >
+        <Grid item xs={isShowMenuLeft ? 10 : 11.7} className={classes.containerChild} >
           {childrenChild}
         </Grid>
       </Grid>

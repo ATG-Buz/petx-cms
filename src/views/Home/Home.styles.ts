@@ -55,22 +55,20 @@ const useStyles = makeStyles({
         flexBasis: '100%',
       },
       [theme.breakpoints.between(1200, 1700)]: {
-        position: 'absolute',
-        marginLeft: '20.8%',
+        position: 'relative',
         width: '100%',
         height: 'auto',
         overflow: 'hidden',
-        backgroundColor: 'rgba(245, 245, 245, 1)'
+        backgroundColor: '#E0E0E0'
       },
       [theme.breakpoints.up(1700)]: {
-        position: 'absolute',
-        marginLeft: '20.85%',
+        position: 'relative',
         width: '100%',
         height: 'auto',
         overflow: 'hidden',
-        backgroundColor: 'rgba(245, 245, 245, 1)'
+        backgroundColor: '#E0E0E0'
       },
-      backgroundColor: theme.palette.common.white,
+      backgroundColor: theme.palette.common.orange,
     },
     content_icon: {
       width: '100%',
