@@ -1,23 +1,23 @@
 import { Box } from "@mui/material";
 import AppButton from "@/components/AppButton"
 import useStyles from "./Info-treatment.styles"
+import { dataSearchFake } from "./config";
+import SearchApp from "./components/searchApp";
+import TabsApp from "./components/tab";
 
 const InfoTreatment = () => {
     const { classes } = useStyles();
 
     return (
-        <Box>
+        <Box className={classes.root}>
             <Box className={classes.Box}>
                 <div className={classes.Row}>
-                    <AppButton
-                        title="Tìm kiếm"
-                        styleSvgIcon={classes.styleSvgIcon}
-                    />
+                    <SearchApp data={dataSearchFake}/>
                     <AppButton
                         title="Thêm hồ sơ mới"
                     />
                 </div>
-                <div className={classes.Row}>
+                <div className={classes.Row2}>
                     <AppButton
                         title="Lưu"
                     />
@@ -27,7 +27,7 @@ const InfoTreatment = () => {
                 </div>
             </Box>
             <Box>
-
+                <TabsApp />
             </Box>
         </Box>
     )

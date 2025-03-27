@@ -64,14 +64,14 @@ const AppButton = (props: IconLabelProps) => {
               <span className={classes.titleH3} style={styleLabel}>{title}</span>
             </div>
           )}
-          <AppSvgIcon
+          {icon && <AppSvgIcon
             component={icon}
             strokeColor
             color="inherit"
             fontSize={fontSizeIcon || "large"}
             className={isSmall}
             style={{ stroke: stroke || 'inherit' }}
-          />
+          />}
         </div>
       </div>
     </>

@@ -10,6 +10,7 @@ const useStyles = makeStyles({
       justifyContent: "flex-start",
       alignItems: "center",
       cursor: "pointer",
+      width: 'auto'
     },
     IconMenu: {
       width: 56,
@@ -36,13 +37,11 @@ const useStyles = makeStyles({
       margin: 'auto',
     },
     content2: {
-      width: "90%",
+      width: "auto",
       margin: 'auto',
-      paddingTop: 8,
-      paddingBottom: 8,
-      [theme.breakpoints.up(1200)]: {
-        width: "90%",
-      },
+      padding: '8px',
+      border: `1px solid ${theme.palette.divider}`,
+      borderRadius: '12px'
     },
   }
 })
