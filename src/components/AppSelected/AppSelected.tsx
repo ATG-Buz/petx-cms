@@ -2,19 +2,24 @@ import { Box, FormControl, Grid, InputLabel, MenuItem, Select } from "@mui/mater
 
 type typeProps = {
     fullWidth?: boolean;
-    classFromControl?: string
+    classFromControl?: string;
+    labels?: string,
+    styleLabels?: React.CSSProperties;
+    labelRight?: string,
+    styleLabelsRight?: React.CSSProperties;
 }
 const AppSelected = (props: typeProps) => {
-    const {fullWidth, classFromControl} =  props;
+    const { fullWidth, classFromControl, labels, styleLabels, labelRight, styleLabelsRight } = props;
 
     return (
         <FormControl fullWidth={fullWidth} className={classFromControl}>
-            <InputLabel id="demo-simple-select-label">Age</InputLabel>
+            {labels && <span style={styleLabels}>{labels}<span style={{ display: labelRight ? 'inline' : 'none', color: 'red', marginLeft: '4px' }}>{labelRight}</span></span>}
+            {/* <InputLabel id="demo-simple-select-label">Age</InputLabel> */}
             <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 // value={age}
-                label="Age"
+                // label="Age"
             // onChange={handleChange}
             >
                 <MenuItem value={10}>Ten</MenuItem>

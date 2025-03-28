@@ -83,17 +83,15 @@ const InnerTextFieldBooking = (
   };
   return (
     <FormControl style={style} variant="outlined">
-      {/* {labels && <p style={styleLabels}>{labels}</p>} */}
-      {labels && <p style={styleLabels}>{labels}<span style={{ display: labelRight ? 'block' : 'none', ...styleLabelsRight }}>.{labelRight}</span></p>}
+      {labels && <span style={styleLabels}>{labels}<span style={{ display: labelRight ? 'inline' : 'none', color: 'red', marginLeft: '4px' }}>{labelRight}</span></span>}
       <OutlinedInput
         id="outlined-adornment-password"
-        type={type}
+        // type={type}
         value={inputValue}
         onChange={onChange}
         inputProps={{ maxLength: maxLength || 255 }}
         defaultValue={defaultValue}
         disabled={labelDisabled}
-        style={{ border: '1px solid #2A2A2A', height: 32 }}
         endAdornment={
           IconEndDisable ? (
             <InputAdornment position="end">

@@ -54,21 +54,11 @@ const useStyles = makeStyles({
         WebkitFlexBasis: '100%',
         flexBasis: '100%',
       },
-      [theme.breakpoints.between(1200, 1700)]: {
-        position: 'relative',
-        width: '100%',
-        height: 'auto',
-        overflow: 'hidden',
-        backgroundColor: '#E0E0E0'
-      },
-      [theme.breakpoints.up(1700)]: {
-        position: 'relative',
-        width: '100%',
-        height: 'auto',
-        overflow: 'hidden',
-        backgroundColor: '#E0E0E0'
-      },
-      backgroundColor: theme.palette.common.orange,
+      position: 'relative',
+      width: '100%',
+      height: 'auto',
+      overflow: 'hidden',
+      backgroundColor: '#E0E0E0',
     },
     content_icon: {
       width: '100%',

@@ -9,17 +9,23 @@ type DataSearchType = {
 }
 type propsType = {
     data: DataSearchType[];
+    labels?: string,
+    styleLabels?: React.CSSProperties;
+    labelRight?: string,
+    fullWidth?: boolean;
 }
 export const SearchApp = (props: propsType) => {
-    const {data} = props
+    const {data, labels, styleLabels, labelRight, fullWidth} = props
 
   return (
-    <Stack spacing={2} sx={{ width: 300 }}>
+    <Stack spacing={2} sx={{ width: fullWidth?  '100%': '50%' }}>
+      {labels && <span style={styleLabels}>{labels}<span style={{ display: labelRight ? 'inline' : 'none', color: 'red', marginLeft: '4px' }}>.{labelRight}</span></span>}
       <Autocomplete
         freeSolo
         id="search-app"
         disableClearable
         options={data.map((option) => option.title)}
+        sx={{marginTop: '0px !important'}}
         renderInput={(params) => (
           <TextField
             {...params}

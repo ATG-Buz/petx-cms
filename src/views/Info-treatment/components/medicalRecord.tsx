@@ -17,11 +17,18 @@ const useStyles = makeStyles({
             gap: '12px',
         },
         content: {
+            width: '100%',
+            gap: '12px',
+            alignItems: 'center',
+            display: 'grid',
+            gridTemplateColumns: "repeat(4,1fr)"
+        },
+        contentCheckBox: {
             display: 'flex',
             flexDirection: 'row',
-            justifyContent: 'space-between',
+            justifyContent: 'flex-start',
             width: '100%',
-            gap: '12px'
+            gap: '12px',
         },
         fromControl: {
             flex: 1,
@@ -37,60 +44,68 @@ const MedicalRecord = () => {
             <Grid item xs={12} className={classes.content}>
                 <TextFieldBooking
                     placeholder="Họ tên chủ vật nuôi"
-                    label="Họ tên chủ vật nuôi"
+                    labels="Họ tên chủ vật nuôi"
+                    labelRight="*"
                     style={{flex: 1}}
                 />
                 <TextFieldBooking
                     placeholder="Điện thoại"
-                    label="Điện thoại"
+                    labels="Điện thoại"
+                    labelRight="*"
                     style={{flex: 1}}
                 />
                 <TextFieldBooking
                     placeholder="Địa chỉ"
-                    label="Địa chỉ"
+                    labels="Địa chỉ"
+                    labelRight="*"
                     style={{flex: 1}}
                 />
             </Grid>
             <Grid item xs={12} className={classes.content}>
                 <TextFieldBooking
                     placeholder="Tên vật nuôi và màu lông"
-                    label="Tên vật nuôi và màu lông"
+                    labels="Tên vật nuôi và màu lông"
+                    labelRight="*"
                     style={{flex: 1}}
                 />
                 <TextFieldBooking
                     placeholder="Loại vật nuôi"
-                    label="Loại vật nuôi"
+                    labels="Loại vật nuôi"
+                    labelRight="*"
                     style={{flex: 1}}
                 />
                 <TextFieldBooking
-                    placeholder="Trọng lượng(kg)"
-                    label="Trọng lượng(kg)"
+                    placeholder="Trọng lượng (kg)"
+                    labels="Trọng lượng (kg)"
+                    labelRight="*"
                     style={{flex: 1}}
                 />
-                <AppSelected classFromControl={classes.fromControl}/>
+                <AppSelected classFromControl={classes.fromControl} labels="Tuổi" labelRight="*"/>
             </Grid>
             <Grid item xs={12} className={classes.content}>
-                <SearchApp data={[]}/>
+                <SearchApp data={[]} labels="Tìm Kiếm" fullWidth/>
                 <TextFieldBooking
                     placeholder="Năm sinh"
-                    label="Năm sinh"
+                    labels="Năm sinh"
+                    labelRight="*"
                     style={{flex: 1}}
                 />
                 <TextFieldBooking
                     placeholder="Chuẩn đoán"
-                    label="Chuẩn đoán"
+                    labels="Chuẩn đoán"
+                    labelRight="*"
                     style={{flex: 1}}
                 />
             </Grid>
             <Grid item xs={12} className={classes.content}>
-                <AppDatePicker />
+                <AppDatePicker  labels="Ngày tháng" fullWidth/>
                 <TextFieldBooking
                     placeholder="Lời dặn"
-                    label="Lời dặn"
-                    style={{flex: 1}}
+                    labels="Lời dặn"
+                    labelRight="*"
                 />
             </Grid>
-            <Grid item xs={12} className={classes.content}>
+            <Grid item xs={12} className={classes.contentCheckBox}>
                 {dataCheckedBox.map((item)=> (
                     <FormControlLabel key={item.id} control={<Checkbox defaultChecked />} label={item.label} />
                 ))}

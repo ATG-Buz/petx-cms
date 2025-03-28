@@ -18,12 +18,15 @@ const useStyles = makeStyles({
             width: '100%'
         },
         boxTab: {
-            borderBottom: 1, 
-            borderColor: 'divider', 
+            borderBottom: 1,
+            borderColor: 'divider',
             width: '100%'
         },
         containerTabs: {
             width: '100%',
+            "& .MuiTabs-indicator": {
+                backgroundColor: theme.palette.common.colorButton
+            }
         },
         tab: {
             flex: 1,
@@ -61,7 +64,7 @@ const a11yProps = (index: number) => {
 
 const TabsApp = () => {
     const [value, setValue] = React.useState(0);
-    const {classes} = useStyles();
+    const { classes } = useStyles();
 
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
@@ -71,13 +74,13 @@ const TabsApp = () => {
         <Box className={classes.root}>
             <Box className={classes.boxTab}>
                 <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" variant='fullWidth' className={classes.containerTabs} >
-                    <Tab label="HỒ SƠ KHÁM BỆNH" {...a11yProps(0)} className={classes.tab}/>
-                    <Tab label="ĐƠN THUỐC" {...a11yProps(1)} className={classes.tab}/>
-                    <Tab label="THANH TOÁN" {...a11yProps(2)} className={classes.tab}/>
+                    <Tab label="HỒ SƠ KHÁM BỆNH" {...a11yProps(0)} className={classes.tab} />
+                    <Tab label="ĐƠN THUỐC" {...a11yProps(1)} className={classes.tab} />
+                    <Tab label="THANH TOÁN" {...a11yProps(2)} className={classes.tab} />
                 </Tabs>
             </Box>
             <CustomTabPanel value={value} index={0}>
-                <MedicalRecord/>
+                <MedicalRecord />
             </CustomTabPanel>
             <CustomTabPanel value={value} index={1}>
                 ĐƠN THUỐC
