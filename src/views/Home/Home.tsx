@@ -43,7 +43,7 @@ const Home = (props: MenuLeftType) => {
 
   return (
     <Grid container className={cx(classes.root)}>
-      <Grid container xs={12} rowSpacing={0} className={classes.content4} style={{ overflow: 'visible' }}>
+      <Grid container rowSpacing={0} className={classes.content4} style={{ overflow: 'visible' }}>
         <Grid item xs={isShowMenuLeft ? 2 : 0.3} className={classes.containerGird}>
           <div className={classes.content_icon}>
             {isShowMenuLeft && <ArrowBackIcon className={classes.icon_hidden} onClick={() => setIsShowMenuLeft(false)} />}

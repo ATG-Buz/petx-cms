@@ -4,6 +4,7 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import { makeStyles } from "tss-react/mui"
 import MedicalRecord from './medicalRecord';
+import Prescription from './prescription';
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -83,7 +84,7 @@ const TabsApp = () => {
                 <MedicalRecord />
             </CustomTabPanel>
             <CustomTabPanel value={value} index={1}>
-                ĐƠN THUỐC
+                <Prescription />
             </CustomTabPanel>
             <CustomTabPanel value={value} index={2}>
                 THANH TOÁN
