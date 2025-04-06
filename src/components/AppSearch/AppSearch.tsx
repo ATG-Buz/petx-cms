@@ -26,6 +26,7 @@ export const SearchApp = (props: propsType) => {
         disableClearable
         options={data.map((option) => option.title)}
         sx={{marginTop: '0px !important'}}
+        style={{backgroundColor: 'white', borderRadius: '8px'}}
         renderInput={(params) => (
           <TextField
             {...params}

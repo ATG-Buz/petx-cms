@@ -10,8 +10,6 @@ import IconButton from '@mui/material/IconButton';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import Visibility from '@mui/icons-material/Visibility';
 
-import { commonConfig } from "@/utils/config"
-
 import {
   OutlinedInput,
   OutlinedInputProps,
@@ -119,6 +117,7 @@ const InnerTextFieldBooking = (
         placeholder={placeholder || " "}
         inputMode={modeInput ? 'numeric' : 'text'}
         onKeyDown={onKeyDown}
+        style={{backgroundColor: 'white', borderRadius: '8px'}}
       />
     </FormControl>
   )

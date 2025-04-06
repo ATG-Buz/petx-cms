@@ -23,7 +23,7 @@ const BasicDatePicker = (props: typeProps) => {
         <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
           <DemoItem label={labels}>
           <DesktopDatePicker
-            sx={{ width: fullWidth ? '100%' : 'auto', marginTop: '0px !important' }}
+            sx={{ width: fullWidth ? '100%' : 'auto', marginTop: '0px !important', backgroundColor: 'white', borderRadius: '8px' }}
             slotProps={{
               field: { clearable: true,},
             }}

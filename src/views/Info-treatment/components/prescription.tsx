@@ -1,7 +1,7 @@
 import { Box, Grid } from "@mui/material";
 import { makeStyles } from "tss-react/mui";
 import TextFieldBooking from "@/components/TextFieldBooking";
-import SearchApp from "./searchApp";
+import SearchApp from "../../../components/AppSearch/AppSearch";
 import AddIcon from '@mui/icons-material/Add';
 import { AppText600 } from "@/components/AppText";
 import { useState } from "react";

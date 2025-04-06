@@ -21,6 +21,7 @@ const AppSelected = (props: typeProps) => {
                 // value={age}
                 // label="Age"
             // onChange={handleChange}
+            style={{backgroundColor: 'white', borderRadius: '8px'}}
             >
                 <MenuItem value={10}>Ten</MenuItem>
                 <MenuItem value={20}>Twenty</MenuItem>

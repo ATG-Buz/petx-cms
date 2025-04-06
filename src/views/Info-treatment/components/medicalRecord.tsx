@@ -3,7 +3,7 @@ import AppButton from "@/components/AppButton"
 import { makeStyles } from "tss-react/mui";
 import TextFieldBooking from "@/components/TextFieldBooking";
 import { AppSelected } from "@/components/AppSelected";
-import SearchApp from "./searchApp";
+import SearchApp from "../../../components/AppSearch/AppSearch";
 import { AppDatePicker } from "@/components/AppDatePicker";
 import { dataCheckedBox } from "../config";
 

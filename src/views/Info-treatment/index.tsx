@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import AppButton from "@/components/AppButton"
 import useStyles from "./Info-treatment.styles"
 import { dataSearchFake } from "./config";
-import SearchApp from "./components/searchApp";
+import SearchApp from "../../components/AppSearch/AppSearch";
 import TabsApp from "./components/tab";
 
 const InfoTreatment = () => {
