@@ -8,6 +8,7 @@ import { i18n, useTranslation } from 'next-i18next';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { dataMenu } from "./config"
+import { gotoPage } from "@/utils/helpers/common"
 
 type MenuLeftType = {
   childrenChild?: React.ReactNode
@@ -38,7 +39,7 @@ const Home = (props: MenuLeftType) => {
     }
     newActiveMenu[key] = true;
     setActiveMenuChild(newActiveMenu);
-
+    gotoPage(path);
   };
 
   return (

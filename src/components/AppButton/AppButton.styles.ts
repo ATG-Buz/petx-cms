@@ -35,13 +35,18 @@ const useStyles = makeStyles({
     content1: {
       width: "100%",
       margin: 'auto',
+      border: `1px solid ${theme.palette.divider}`,
+      borderRadius: '12px',
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      backgroundColor: theme.palette.common.orange,
+      padding: '8px',
+      gap: 4
     },
     content2: {
       width: "auto",
       margin: 'auto',
-      padding: '8px',
-      border: `1px solid ${theme.palette.divider}`,
-      borderRadius: '12px'
     },
   }
 })

@@ -6,18 +6,18 @@ export const dataMenu = [
       // icon: RentIcon,
       // iconWhite: RentIconWhite,
       title: "Thông tin - điều trị",
-      path: "/Rooms",
+      path: "/thong-tin-dieu-tri",
       dataMenuChild: [
         {
             id: 0,
             title: "Khám bệnh mới",
-            path: "/Rooms",
+            path: "/thong-tin-dieu-tri/kham-benh-moi",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 1,
             title: "Tìm kiếm thông tin",
-            path: "/Rooms",
+            path: "/thong-tin-dieu-tri/tim-kiem-thong-tin",
             icon: SubdirectoryArrowRightIcon
         },
         {

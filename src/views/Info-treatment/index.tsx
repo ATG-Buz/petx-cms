@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import AppButton from "@/components/AppButton"
 import useStyles from "./Info-treatment.styles"
-import { dataSearchFake } from "./config";
+import { dataSearchFake } from "../../services/storage/config";
 import SearchApp from "../../components/AppSearch/AppSearch";
 import TabsApp from "./components/tab";
 

@@ -1,11 +1,7 @@
-import { Box, Checkbox, FormControl, FormControlLabel, Grid, InputLabel, MenuItem, Select } from "@mui/material";
-import AppButton from "@/components/AppButton"
+import { Grid } from "@mui/material";
 import { makeStyles } from "tss-react/mui";
 import TextFieldBooking from "@/components/TextFieldBooking";
 import { AppSelected } from "@/components/AppSelected";
-import SearchApp from "../../../components/AppSearch/AppSearch";
-import { AppDatePicker } from "@/components/AppDatePicker";
-import { dataCheckedBox } from "../config";
 
 const useStyles = makeStyles({
     name: "payment",

@@ -14,7 +14,7 @@ type propsType = {
     labelRight?: string,
     fullWidth?: boolean;
 }
-export const SearchApp = (props: propsType) => {
+const SearchApp = (props: propsType) => {
     const {data, labels, styleLabels, labelRight, fullWidth} = props
 
   return (

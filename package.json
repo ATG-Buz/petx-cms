@@ -22,6 +22,7 @@
     "aos": "^2.3.4",
     "axios": "^1.6.7",
     "dayjs": "^1.11.10",
+    "file-saver": "^2.0.5",
     "formik": "^2.4.6",
     "glamor": "^2.20.40",
     "html2canvas": "^1.4.1",
@@ -48,10 +49,12 @@
     "sass": "^1.71.1",
     "slick-carousel": "^1.8.1",
     "tss-react": "^4.9.4",
-    "url-loader": "^4.1.1"
+    "url-loader": "^4.1.1",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@types/aos": "^3.0.7",
+    "@types/file-saver": "^2.0.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-color": "^3.0.12",
