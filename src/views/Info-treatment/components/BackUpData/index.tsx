@@ -10,7 +10,7 @@ import AppButton from "@/components/AppButton";
 import DoneIcon from '@mui/icons-material/Done';
 import SearchIcon from '@mui/icons-material/Search';
 
-const SearchInfoCustomer = () => {
+const BackUpData = () => {
     const { classes } = useStyles();
     const [itemChecked, setItemChecked] = useState<string[]>([])
     const [itemCheckedAll, setItemCheckedAll] = useState(false);
@@ -113,4 +113,4 @@ const SearchInfoCustomer = () => {
     );
 };
 
-export default SearchInfoCustomer;
+export default BackUpData;
