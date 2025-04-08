@@ -50,7 +50,7 @@ export const dataMenu = [
         {
             id: 2,
             title: "Quản lý chức danh",
-            path: "/Rooms",
+            path: "/cai-dat-quan-ly/quan-ly-chuc-danh",
             icon: SubdirectoryArrowRightIcon
         },
         {
