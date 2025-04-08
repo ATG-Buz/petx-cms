@@ -23,3 +23,29 @@ export const dataSearchFake = [
     { title: 'The Godfather: Part II', value: '1974' },
     { title: 'The Dark Knight', value: '2008' }
 ]
+export const tableData = [
+    {
+        id: "1",
+        soHoSo: "HS001",
+        tenThanChu: "Nguyễn Văn A",
+        dienThoai: "0123456789",
+        diaChi: "123 Đường ABC, TP.HCM",
+        tenVatNuoi: "Mèo Tom",
+        chuanDoan: "Cảm cúm",
+        ngayTaiKham: "2025-04-10",
+        tongTien: "500,000 VND",
+        NguoiXoa: "Không nói đó",
+    },
+    {
+        id: "2",
+        soHoSo: "HS002",
+        tenThanChu: "Trần Thị B",
+        dienThoai: "0987654321",
+        diaChi: "456 Đường XYZ, Hà Nội",
+        tenVatNuoi: "Chó Max",
+        chuanDoan: "Viêm da",
+        ngayTaiKham: "2025-04-15",
+        tongTien: "1,200,000 VND",
+        NguoiXoa: "Không nói đó",
+    },
+];

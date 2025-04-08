@@ -23,7 +23,7 @@ export const dataMenu = [
         {
             id: 2,
             title: "Khôi phục toa thuốc xoá",
-            path: "/Rooms",
+            path: "/thong-tin-dieu-tri/tim-kiem-toa-thuoc",
             icon: SubdirectoryArrowRightIcon
         },
       ]

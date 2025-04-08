@@ -7,20 +7,20 @@ import LayoutMain from "@/layouts/Main"
 import type { NextPageWithLayout } from "@/pages/_app"
 import type { GetStaticProps } from "next"
 
-const ViewSearchInfoCustomer = dynamic(() => import("@/views/Info-treatment/components/SearchInfoCustomer"), {
+const ViewBackUpData = dynamic(() => import("@/views/Info-treatment/components/BackUpData"), {
   suspense: true,
   ssr: false,
 })
 
-const SearchInfoCustomer: NextPageWithLayout = () => {
+const BackUpData: NextPageWithLayout = () => {
   return (
     <Suspense fallback="...">
-      <ViewSearchInfoCustomer />
+      <ViewBackUpData />
     </Suspense>
   )
 }
 
-SearchInfoCustomer.getLayout = page => {
+BackUpData.getLayout = page => {
   return (
       <LayoutMain>{page}</LayoutMain>
   )
@@ -34,4 +34,4 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   }
 }
 
-export default SearchInfoCustomer
+export default BackUpData
