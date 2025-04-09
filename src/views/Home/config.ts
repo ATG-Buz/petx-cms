@@ -56,7 +56,7 @@ export const dataMenu = [
         {
             id: 3,
             title: "Toa thuốc tự động",
-            path: "/Rooms",
+            path: "/cai-dat-quan-ly/toa-thuoc-tu-dong",
             icon: SubdirectoryArrowRightIcon
         },
         {
