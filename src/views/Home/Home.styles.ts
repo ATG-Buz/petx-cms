@@ -35,11 +35,7 @@ const useStyles = makeStyles({
       overflow: 'auto',
       position: 'relative',
       width: '100%',
-      [theme.breakpoints.up(1200)]: {
-        overflow: 'auto',
-        position: 'relative',
-        width: '100%',
-      }
+      height: '100vh'
     },
     content1: {
       padding: 10,

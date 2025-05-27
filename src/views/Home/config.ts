@@ -62,13 +62,13 @@ export const dataMenu = [
         {
             id: 4,
             title: "Cài đặt định lượng thuốc",
-            path: "/Rooms",
+            path: "/cai-dat-quan-ly/cai-dat-dinh-luong-thuoc",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 5,
             title: "Cài đặt truy cập quản lý",
-            path: "/Rooms",
+            path: "/cai-dat-quan-ly/cai-dat-truy-cap-quan-ly",
             icon: SubdirectoryArrowRightIcon
         },
         {
