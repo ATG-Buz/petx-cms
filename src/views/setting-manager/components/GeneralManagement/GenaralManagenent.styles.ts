@@ -30,7 +30,7 @@ const useStyles = makeStyles({
         }
       },
       containerTable: {
-        padding: '12px !important'
+        padding: '12px !important',
       },
       textCheckBox: {
         color: theme.palette.common.black,
