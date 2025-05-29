@@ -49,3 +49,19 @@ export const tableData = [
         NguoiXoa: "Không nói đó",
     },
 ];
+
+export const dataService = [
+    {
+        id: "1",
+        tenDichVu: "Khám sức khỏe",
+        giaDichVu: "200,000 VND",
+        moTa: "Khám tổng quát sức khỏe cho thú cưng",
+    },
+    {
+        id: "2",
+        tenDichVu: "Tiêm phòng",
+        giaDichVu: "150,000 VND",       
+        moTa: "Tiêm phòng các bệnh thường gặp cho thú cưng",
+    },
+]
+

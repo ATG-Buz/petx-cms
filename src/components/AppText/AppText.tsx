@@ -25,7 +25,7 @@ export const AppText600 = ({ children }: { children: React.ReactNode }) => {
       fontSize: "16px",
       fontWeight: "600",
       lineHeight: "24px",
-      textAlign: "center",
+      // textAlign: "center",
     }} >
       {children}
     </span>

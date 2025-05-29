@@ -74,55 +74,55 @@ export const dataMenu = [
         {
             id: 6,
             title: "Cài đặt dịch vụ",
-            path: "/Rooms",
+            path: "/cai-dat-quan-ly/cai-dat-dich-vu",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 7,
             title: "Quản lý tài sản",
-            path: "/Rooms",
+            path: "/cai-dat-quan-ly/quan-ly-tai-san",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 8,
             title: "Cài đặt mã hàng, thuốc",
-            path: "/Rooms",
+            path: "/cai-dat-quan-ly/cai-dat-ma-hang-thuoc",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 9,
             title: "Điều chỉnh giá bán",
-            path: "/Rooms",
+            path: "/cai-dat-quan-ly/dieu-chinh-gia-ban",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 10,
             title: "Cài đặt nhà cung cấp",
-            path: "/Rooms",
+            path: "/cai-dat-quan-ly/cai-dat-nha-cung-cap",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 11,
             title: "Cài đặt chuẩn đoán",
-            path: "/Rooms",
+            path: "/cai-dat-quan-ly/cai-dat-chuan-doan",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 12,
             title: "Cài đặt giống vật nuôi",
-            path: "/Rooms",
+            path: "/cai-dat-quan-ly/cai-dat-giong-vat-nuoi",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 13,
             title: "Cài đặt lý do tái khám",
-            path: "/Rooms",
+            path: "/cai-dat-quan-ly/cai-dat-ly-do-tai-kham",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 14,
             title: "Cài đặt chiết khấu",
-            path: "/Rooms",
+            path: "/cai-dat-quan-ly/cai-dat-chiet-khau",
             icon: SubdirectoryArrowRightIcon
         },
       ]
@@ -137,31 +137,31 @@ export const dataMenu = [
         {
             id: 0,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/ban-hang-petshop/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 1,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/ban-hang-petshop/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 3,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/ban-hang-petshop/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 4,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/ban-hang-petshop/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 5,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/ban-hang-petshop/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
       ]
@@ -176,31 +176,31 @@ export const dataMenu = [
         {
             id: 0,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/xuat-sang-chi-nhanh/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 1,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/xuat-sang-chi-nhanh/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 2,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/xuat-sang-chi-nhanh/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 3,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/xuat-sang-chi-nhanh/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 4,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/xuat-sang-chi-nhanh/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
       ]
@@ -215,31 +215,31 @@ export const dataMenu = [
         {
             id: 0,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/nhap-thuoc-hang-hoa/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 1,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/nhap-thuoc-hang-hoa/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 2,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/nhap-thuoc-hang-hoa/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 3,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+                path: "/nhap-thuoc-hang-hoa/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 4,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/nhap-thuoc-hang-hoa/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
       ]
@@ -254,31 +254,31 @@ export const dataMenu = [
         {
             id: 0,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/kiem-ke-kho-hang/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 1,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/kiem-ke-kho-hang/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 2,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/kiem-ke-kho-hang/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 3,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/kiem-ke-kho-hang/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 4,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/kiem-ke-kho-hang/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
       ]
@@ -293,31 +293,31 @@ export const dataMenu = [
         {
             id: 0,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/quan-ly-cong-no/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 1,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/quan-ly-cong-no/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 2,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/quan-ly-cong-no/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 3,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/quan-ly-cong-no/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 4,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/quan-ly-cong-no/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
       ]
@@ -332,31 +332,31 @@ export const dataMenu = [
         {
             id: 0,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/thong-ke-doanh-so/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 1,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/thong-ke-doanh-so/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 2,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/thong-ke-doanh-so/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 3,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/thong-ke-doanh-so/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 4,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/thong-ke-doanh-so/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
       ]
@@ -371,31 +371,31 @@ export const dataMenu = [
         {
             id: 0,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/tien-ich-thong-bao/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 1,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/tien-ich-thong-bao/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 2,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/tien-ich-thong-bao/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 3,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/tien-ich-thong-bao/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 4,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/tien-ich-thong-bao/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
       ]
@@ -410,31 +410,31 @@ export const dataMenu = [
         {
             id: 0,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/ket-toan-thu-chi/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 1,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/ket-toan-thu-chi/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 2,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/ket-toan-thu-chi/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 3,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/ket-toan-thu-chi/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 4,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/ket-toan-thu-chi/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
       ]
@@ -449,31 +449,31 @@ export const dataMenu = [
         {
             id: 0,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/tro-giup-su-dung/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 1,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/tro-giup-su-dung/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 2,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/tro-giup-su-dung/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 3,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/tro-giup-su-dung/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
         {
             id: 4,
             title: "Thông tin - điều trị",
-            path: "/Rooms",
+            path: "/tro-giup-su-dung/thong-tin-dieu-tri",
             icon: SubdirectoryArrowRightIcon
         },
       ]
