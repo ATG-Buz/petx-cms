@@ -114,4 +114,16 @@ export const dataDiagnosticSettings = [
         id: "12",
         chuanDoan: "XG: ",
     },
+    {
+        id: "13",
+        chuanDoan: "HP: ",
+    },
+    {
+        id: "14",
+        chuanDoan: "BAN THUOC ",
+    },
+    {
+        id: "15",
+        chuanDoan: "X-QUANG",
+    },
 ]

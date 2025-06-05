@@ -30,18 +30,23 @@ const useStyles = makeStyles({
       }
     },
     containerButton: {
-      color: 'white'
+      color: 'white',
     },
     tableBorderHeader: {
       border: "1px solid white",
-      backgroundColor: '#E0E0E0'
+      backgroundColor: '#E0E0E0',
     },
     tableBorder: {
       border: "1px solid #E0E0E0",
     },
     containerTable: {
-      padding: '12px !important'
+      padding: '12px !important',
+      height: '90vh',
+      overflow: 'auto',
     },
+    tableBody: {
+      overflow: 'auto',
+    }
   }
 })
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Grid, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from "@mui/material";
 import TextFieldBooking from "@/components/TextFieldBooking";
-import { tableData } from "@/services/storage/config";
+import { dataDiagnosticSettings, tableData } from "@/services/storage/config";
 import { AppText600 } from "@/components/AppText";
 import useStyles from "./DiagnosticSettings.styles";
 import AppButton from "@/components/AppButton";
@@ -32,35 +32,29 @@ const DiagnosticSettings = () => {
                                     <TableCell className={classes.tableBorderHeader}></TableCell>
                                 </TableRow>
                             </TableHead>
-                            <TableBody>
-                                {tableData.map((row, index) => (
+                            <TableBody component={Paper} className={classes.tableBody}>
+                                {dataDiagnosticSettings.map((row, index) => (
                                     <TableRow key={row.id}>
                                         <TableCell className={classes.tableBorder}>
                                             <TextFieldBooking
-                                                placeholder="Thông Tin"
+                                                placeholder={row.chuanDoan}
                                                 labelRight="*"
                                                 style={{width: '100%'}}
                                             />
                                         </TableCell>
                                         <TableCell className={classes.tableBorder}>
-                                            <TextFieldBooking
-                                                placeholder="Thông Tin"
-                                                style={{width: '100%'}}
-                                            />
-                                        </TableCell>
-                                        <TableCell className={classes.tableBorder}>
-                                            <TextFieldBooking
-                                                placeholder="Thông Tin"
-                                                style={{width: '100%'}}
-                                            />
-                                        </TableCell>
-                                        <TableCell className={classes.tableBorder}>
-
-                                        </TableCell>
-                                        <TableCell className={classes.tableBorder}>
                                             <AppButton 
                                             styleSvgIcon={classes.containerButton} 
                                             title="Lưu" icon={SaveIcon} 
+                                            stroke="white" 
+                                            fontSizeIcon="small"
+                                            onClick={() => handleClickSave()}
+                                            ></AppButton>
+                                        </TableCell>
+                                        <TableCell className={classes.tableBorder}>
+                                             <AppButton 
+                                            styleSvgIcon={classes.containerButton} 
+                                            title="Xoá" icon={SaveIcon} 
                                             stroke="white" 
                                             fontSizeIcon="small"
                                             onClick={() => handleClickSave()}
