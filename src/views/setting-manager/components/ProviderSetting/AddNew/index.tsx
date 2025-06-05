@@ -56,10 +56,10 @@ const AddNew = () => {
                                         />
                                     </TableCell>
                                     <TableCell className={classes.tableBorder}>
-                                        <FormControlLabel control={<Checkbox />} label={`${t('Khách hàng')}`} className={classes.textCheckBox} />
+                                        <FormControlLabel control={<Checkbox />} label={``} className={classes.textCheckBox} />
                                     </TableCell>
                                     <TableCell className={classes.tableBorder}>
-                                        <FormControlLabel control={<Checkbox />} label={`${t('Nhà cung cấp')}`} className={classes.textCheckBox} />
+                                        <FormControlLabel control={<Checkbox />} label={``} className={classes.textCheckBox} />
 
                                     </TableCell>
                                     <TableCell className={classes.tableBorder}>
