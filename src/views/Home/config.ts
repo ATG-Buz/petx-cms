@@ -90,12 +90,6 @@ export const dataMenu = [
             icon: SubdirectoryArrowRightIcon
         },
         {
-            id: 9,
-            title: "Điều chỉnh giá bán",
-            path: "/cai-dat-quan-ly/dieu-chinh-gia-ban",
-            icon: SubdirectoryArrowRightIcon
-        },
-        {
             id: 10,
             title: "Cài đặt nhà cung cấp",
             path: "/cai-dat-quan-ly/cai-dat-nha-cung-cap",

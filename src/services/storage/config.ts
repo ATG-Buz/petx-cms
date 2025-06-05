@@ -65,3 +65,53 @@ export const dataService = [
     },
 ]
 
+export const dataDiagnosticSettings = [
+    {
+        id: "1",
+        chuanDoan: "KB: ",
+    },
+    {
+        id: "2",
+        chuanDoan: "TN: ",
+    },
+    {
+        id: "3",
+        chuanDoan: "NK: ",
+    },
+    {
+        id: "4",
+        chuanDoan: "PT: ",
+    },
+    {
+        id: "5",
+        chuanDoan: "SA: ",
+    },
+    {
+        id: "6",
+        chuanDoan: "TP: ",
+    },
+    {
+        id: "7",
+        chuanDoan: "XN: ",
+    },
+    {
+        id: "8",
+        chuanDoan: "DV: ",
+    },
+    {
+        id: "9",
+        chuanDoan: "Tạm Ứng: ",
+    },
+    {
+        id: "10",
+        chuanDoan: "Lưu: ",
+    },
+    {
+        id: "11",
+        chuanDoan: "Grooming: ",
+    },
+    {
+        id: "12",
+        chuanDoan: "XG: ",
+    },
+]
