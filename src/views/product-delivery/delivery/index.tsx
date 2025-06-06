@@ -49,12 +49,13 @@ const Delivery = () => {
           {/* Customer Information Row */}
           <Grid item container xs={12} spacing={2}>
             <Grid item xs={2}>
-              <TextFieldBooking
-                placeholder="Tên khách hàng"
-                labels="Tên khách hàng:"
-                labelRight="*"
-                style={{ width: "100%" }}
-              />
+              <AppSelected labels="Xuất từ:" labelRight="*" fullWidth />
+            </Grid>
+            <Grid item xs={2}>
+              <AppSelected labels="Đến:" labelRight="*" fullWidth />
+            </Grid>
+            <Grid item xs={2}>
+              <AppSelected labels="Xuất theo:" labelRight="*" fullWidth />
             </Grid>
             <Grid item xs={2}>
               <TextFieldBooking
@@ -64,14 +65,7 @@ const Delivery = () => {
                 style={{ width: "100%" }}
               />
             </Grid>
-            <Grid item xs={3}>
-              <TextFieldBooking
-                placeholder="Địa chỉ"
-                labels="Địa chỉ:"
-                style={{ width: "100%" }}
-              />
-            </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={2}>
               <TextFieldBooking
                 placeholder="Quét mã vạch"
                 labels="Mã vạch:"
@@ -119,6 +113,9 @@ const Delivery = () => {
                       Số lượng
                     </TableCell>
                     <TableCell className={classes.tableBorderHeader}>
+                      Hạn sử dụng
+                    </TableCell>
+                    <TableCell className={classes.tableBorderHeader}>
                       Thành tiền
                     </TableCell>
                     <TableCell
@@ -156,6 +153,13 @@ const Delivery = () => {
                     </TableCell>
                     <TableCell className={classes.tableBorder}>
                       <TextFieldBooking
+                        placeholder="Hạn sử dụng"
+                        type="date"
+                        style={{ width: "100%" }}
+                      />
+                    </TableCell>
+                    <TableCell className={classes.tableBorder}>
+                      <TextFieldBooking
                         placeholder="Thành tiền"
                         type="number"
                         style={{ width: "100%" }}
@@ -181,17 +185,6 @@ const Delivery = () => {
           {/* Bottom Section */}
           <Grid item container xs={12} spacing={2}>
             <Grid item xs={3}>
-              <AppSelected labels="Bác sĩ tư vấn:" labelRight="*" fullWidth />
-            </Grid>
-            <Grid item xs={3}>
-              <TextFieldBooking
-                placeholder="Tiền tư vấn"
-                labels="Tiền tư vấn:"
-                type="number"
-                style={{ width: "100%" }}
-              />
-            </Grid>
-            <Grid item xs={3}>
               <TextFieldBooking
                 placeholder="Tổng tiền"
                 labels="Tổng tiền:"
@@ -207,10 +200,7 @@ const Delivery = () => {
                 style={{ width: "100%" }}
               />
             </Grid>
-          </Grid>
-
-          <Grid item container xs={12} spacing={2}>
-            <Grid item xs={4}>
+            <Grid item xs={2}>
               <TextFieldBooking
                 placeholder="Chiết khấu"
                 labels="Chiết khấu:"
@@ -218,18 +208,18 @@ const Delivery = () => {
                 style={{ width: "100%" }}
               />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={2}>
               <TextFieldBooking
-                placeholder="% A"
-                labels="% A:"
+                placeholder="%"
+                labels="%"
                 type="number"
                 style={{ width: "100%" }}
               />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={2}>
               <TextFieldBooking
-                placeholder="% B"
-                labels="% B:"
+                placeholder="(A/B)"
+                labels="(A/B)"
                 type="number"
                 style={{ width: "100%" }}
               />
@@ -237,7 +227,7 @@ const Delivery = () => {
           </Grid>
 
           <Grid item container xs={12} spacing={2}>
-            <Grid item xs={4}>
+            <Grid item xs={3}>
               <TextFieldBooking
                 placeholder="Tiền phải thanh toán"
                 labels="Tiền phải thanh toán:"
@@ -246,7 +236,7 @@ const Delivery = () => {
                 labelDisabled={true}
               />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={3}>
               <TextFieldBooking
                 placeholder="Đã thanh toán"
                 labels="Đã thanh toán:"
@@ -254,13 +244,10 @@ const Delivery = () => {
                 style={{ width: "100%" }}
               />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={3}>
               <AppSelected labels="Tiền mặt:" labelRight="*" fullWidth />
             </Grid>
-          </Grid>
-
-          <Grid item container xs={12} spacing={2}>
-            <Grid item xs={4}>
+            <Grid item xs={3}>
               <TextFieldBooking
                 placeholder="Còn lại"
                 labels="Còn lại:"
@@ -279,6 +266,8 @@ const Delivery = () => {
               />
             </Grid>
           </Grid>
+
+          <Grid item container xs={12} spacing={2}></Grid>
         </Grid>
       </Grid>
     </Box>
