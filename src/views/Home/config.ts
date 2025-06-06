@@ -176,32 +176,14 @@ export const dataMenu = [
         dataMenuChild: [
             {
                 id: 0,
-                title: "Thông tin - điều trị",
-                path: "/xuat-sang-chi-nhanh/thong-tin-dieu-tri",
+                title: "Xuất hàng",
+                path: "/xuat-sang-chi-nhanh/xuat-hang",
                 icon: SubdirectoryArrowRightIcon
             },
             {
                 id: 1,
-                title: "Thông tin - điều trị",
-                path: "/xuat-sang-chi-nhanh/thong-tin-dieu-tri",
-                icon: SubdirectoryArrowRightIcon
-            },
-            {
-                id: 2,
-                title: "Thông tin - điều trị",
-                path: "/xuat-sang-chi-nhanh/thong-tin-dieu-tri",
-                icon: SubdirectoryArrowRightIcon
-            },
-            {
-                id: 3,
-                title: "Thông tin - điều trị",
-                path: "/xuat-sang-chi-nhanh/thong-tin-dieu-tri",
-                icon: SubdirectoryArrowRightIcon
-            },
-            {
-                id: 4,
-                title: "Thông tin - điều trị",
-                path: "/xuat-sang-chi-nhanh/thong-tin-dieu-tri",
+                title: "Danh sách xuất hàng",
+                path: "/xuat-sang-chi-nhanh/danh-sach-xuat-hang",
                 icon: SubdirectoryArrowRightIcon
             },
         ]

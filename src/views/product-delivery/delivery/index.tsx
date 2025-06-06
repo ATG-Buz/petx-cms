@@ -12,16 +12,16 @@ import {
 } from "@mui/material";
 import TextFieldBooking from "@/components/TextFieldBooking";
 import { AppText600 } from "@/components/AppText";
-import useStyles from "./Sell.styles";
+import useStyles from "./Delivery.styles";
 import AppButton from "@/components/AppButton";
 import AddIcon from "@mui/icons-material/Add";
 import SaveIcon from "@mui/icons-material/Save";
 import PrintIcon from "@mui/icons-material/Print";
 import { AppSelected } from "@/components/AppSelected";
 import { toast } from "react-toastify";
-import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 
-const Sell = () => {
+const Delivery = () => {
   const { classes } = useStyles();
   const [products, setProducts] = useState([]);
 
@@ -41,8 +41,8 @@ const Sell = () => {
     <Box className={classes.root}>
       <Grid container className={classes.container}>
         <Grid item xs={12} className={classes.contentLabel}>
-          <LocalHospitalIcon />
-          <AppText600>Bán hàng</AppText600>
+          <LocalShippingIcon />
+          <AppText600>Giao hàng</AppText600>
         </Grid>
 
         <Grid container className={classes.containerContent} spacing={2}>
@@ -285,4 +285,4 @@ const Sell = () => {
   );
 };
 
-export default Sell;
+export default Delivery;

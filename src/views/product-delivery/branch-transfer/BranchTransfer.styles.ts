@@ -31,15 +31,14 @@ const useStyles = makeStyles()((theme) => {
             marginLeft: '0px',
             marginBottom: '16px'
         },
-        buttonWrapper: {
+        containerFilter: {
             display: 'flex',
-            alignItems: 'flex-end',
-            height: '100%',
-            paddingBottom: '2px',
-            '& button': {
-                height: '40px',
-                width: '100%',
-            }
+            alignItems: 'center',
+        },
+        buttonContainer: {
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
         },
         containerButton: {
             color: "white",
@@ -55,6 +54,10 @@ const useStyles = makeStyles()((theme) => {
         },
         tableBorder: {
             borderBottom: `1px solid ${theme.palette.divider}`,
+        },
+        totalCount: {
+            marginTop: theme.spacing(1),
+            textAlign: 'left',
         },
     };
 });
