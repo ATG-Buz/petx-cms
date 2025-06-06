@@ -11,15 +11,15 @@ import {
   Paper,
 } from "@mui/material";
 import TextFieldBooking from "@/components/TextFieldBooking";
-import { dataDiagnosticSettings, tableData } from "@/services/storage/config";
+import { dataFakeLivestock } from "@/services/storage/config";
 import { AppText600 } from "@/components/AppText";
-import useStyles from "./DiagnosticSettings.styles";
+import useStyles from "./Livestock.styles";
 import AppButton from "@/components/AppButton";
 import RoomPreferencesIcon from "@mui/icons-material/RoomPreferences";
 import SaveIcon from "@mui/icons-material/Save";
 import { toast } from "react-toastify";
 
-const DiagnosticSettings = () => {
+const Livestock = () => {
   const { classes } = useStyles();
 
   const handleClickSave = () => {
@@ -30,7 +30,7 @@ const DiagnosticSettings = () => {
       <Grid container className={classes.container}>
         <Grid item xs={12} className={classes.contentLabel}>
           <RoomPreferencesIcon />
-          <AppText600>Phòng Khám</AppText600>
+          <AppText600>Danh mục giống vật nuôi</AppText600>
         </Grid>
         {/* Table */}
         <Grid item xs={12} className={classes.containerTable}>
@@ -39,17 +39,17 @@ const DiagnosticSettings = () => {
               <TableHead>
                 <TableRow>
                   <TableCell className={classes.tableBorderHeader}>
-                    Chuẩn đoán
+                    Giống vật nuôi
                   </TableCell>
                   <TableCell className={classes.tableBorderHeader}></TableCell>
                 </TableRow>
               </TableHead>
               <TableBody component={Paper} className={classes.tableBody}>
-                {dataDiagnosticSettings.map((row, index) => (
+                {dataFakeLivestock.map((row, index) => (
                   <TableRow key={row.id}>
                     <TableCell className={classes.tableBorder}>
                       <TextFieldBooking
-                        placeholder={row.chuanDoan}
+                        placeholder={row.tenVatNuoi}
                         labelRight="*"
                         style={{ width: "100%" }}
                       />
@@ -104,4 +104,4 @@ const DiagnosticSettings = () => {
   );
 };
 
-export default DiagnosticSettings;
+export default Livestock;

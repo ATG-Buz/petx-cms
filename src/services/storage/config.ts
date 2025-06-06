@@ -1,21 +1,21 @@
 
 export const dataCheckedBox = [
-    {id: 1, label: 'đã tái khám', value: false},
-    {id: 2, label: 'Lưu chuồng', value: false},
-    {id: 3, label: 'Điều trị TC', value: false},
-    {id: 4, label: 'Điều trị TB', value: false},
-    {id: 5, label: 'Khiếu nại', value: false},
+    { id: 1, label: 'đã tái khám', value: false },
+    { id: 2, label: 'Lưu chuồng', value: false },
+    { id: 3, label: 'Điều trị TC', value: false },
+    { id: 4, label: 'Điều trị TB', value: false },
+    { id: 5, label: 'Khiếu nại', value: false },
 ]
 export const dataCheckedBoxInfoCustomer = [
-    {id: 1, label: 'đã tái khám', value: false},
-    {id: 3, label: 'Điều trị TC', value: false},
-    {id: 4, label: 'Điều trị TB', value: false},
-    {id: 5, label: 'KHKN', value: false},
-    {id: 6, label: 'Tìm kiếm CN#', value: false},
-    {id: 7, label: 'Lưu chuồng', value: false},
-    {id: 8, label: 'Còn nợ', value: false},
-    {id: 9, label: 'Hiện tổng số tiền', value: false},
-    {id: 10, label: 'Toa thuốc đã chỉnh sửa', value: false},
+    { id: 1, label: 'đã tái khám', value: false },
+    { id: 3, label: 'Điều trị TC', value: false },
+    { id: 4, label: 'Điều trị TB', value: false },
+    { id: 5, label: 'KHKN', value: false },
+    { id: 6, label: 'Tìm kiếm CN#', value: false },
+    { id: 7, label: 'Lưu chuồng', value: false },
+    { id: 8, label: 'Còn nợ', value: false },
+    { id: 9, label: 'Hiện tổng số tiền', value: false },
+    { id: 10, label: 'Toa thuốc đã chỉnh sửa', value: false },
 ]
 export const dataSearchFake = [
     { title: 'The Shawshank Redemption', value: '1994' },
@@ -60,7 +60,7 @@ export const dataService = [
     {
         id: "2",
         tenDichVu: "Tiêm phòng",
-        giaDichVu: "150,000 VND",       
+        giaDichVu: "150,000 VND",
         moTa: "Tiêm phòng các bệnh thường gặp cho thú cưng",
     },
 ]
@@ -125,5 +125,82 @@ export const dataDiagnosticSettings = [
     {
         id: "15",
         chuanDoan: "X-QUANG",
+    },
+]
+export const dataFakeLivestock = [
+    {
+        id: "1",
+        tenVatNuoi: "Mèo Tom",
+        loaiVatNuoi: "Mèo nhà",
+    },
+    {
+        id: "2",
+        tenVatNuoi: "Chó Max",
+        loaiVatNuoi: "Chó nhà",
+    },
+    {
+        id: "3",
+        tenVatNuoi: "Mèo Tom",
+        loaiVatNuoi: "Mèo nhà",
+    },
+    {
+        id: "4",
+        tenVatNuoi: "Mèo Tom",
+        loaiVatNuoi: "Mèo nhà",
+    },
+    {
+        id: "5",
+        tenVatNuoi: "Mèo Tom",
+        loaiVatNuoi: "Mèo nhà",
+    },
+    {
+        id: "6",
+        tenVatNuoi: "Mèo Tom",
+        loaiVatNuoi: "Mèo nhà",
+    },
+    {
+        id: "7",
+        tenVatNuoi: "Mèo Tom",
+        loaiVatNuoi: "Mèo nhà",
+    },
+    {
+        id: "8",
+        tenVatNuoi: "Mèo Tom",
+        loaiVatNuoi: "Mèo nhà",
+    },
+    {
+        id: "9",
+        tenVatNuoi: "Mèo Tom",
+        loaiVatNuoi: "Mèo nhà",
+    },
+    {
+        id: "10",
+        tenVatNuoi: "Mèo Tom",
+        loaiVatNuoi: "Mèo nhà",
+    },
+    {
+        id: "11",
+        tenVatNuoi: "Mèo Tom",
+        loaiVatNuoi: "Mèo nhà",
+    },
+    {
+        id: "12",
+        tenVatNuoi: "Mèo Tom",
+        loaiVatNuoi: "Mèo nhà",
+    },
+    {
+        id: "13",
+        tenVatNuoi: "Mèo Tom",
+        loaiVatNuoi: "Mèo nhà",
+    },
+    {
+        id: "14",
+        tenVatNuoi: "Mèo Tom",
+        loaiVatNuoi: "Mèo nhà",
+    },
+    {
+        id: "15",
+        tenVatNuoi: "Mèo Tom",
+        loaiVatNuoi: "Mèo nhà",
     },
 ]

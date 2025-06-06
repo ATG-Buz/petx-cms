@@ -1,0 +1,15 @@
+{
+  // "workbench.iconTheme": "material-icon-theme",
+  "editor.formatOnSave": true,
+  "editor.fontWeight": "normal",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.minimap.enabled": false,
+  "editor.lineHeight": 17,
+  "editor.scrollbar.horizontalScrollbarSize": 8,
+  "editor.scrollbar.verticalScrollbarSize": 8,
+  "workbench.editor.showIcons": false,
+  "editor.wordWrapColumn": 100,
+  "terminal.integrated.fontSize": 11,
+  "editor.fontSize": 14,
+  "cSpell.words": []
+}
