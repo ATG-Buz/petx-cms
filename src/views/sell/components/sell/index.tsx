@@ -41,7 +41,7 @@ const Sell = () => {
       <Grid container className={classes.container}>
         <Grid item xs={12} className={classes.contentLabel}>
           <RoomPreferencesIcon />
-          <AppText600>Danh mục lý do tái khám</AppText600>
+          <AppText600>Bán hàng</AppText600>
         </Grid>
 
         <Grid container className={classes.containerContent} spacing={2}>
