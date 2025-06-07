@@ -41,7 +41,7 @@ const useStyles = makeStyles()((theme) => ({
         margin: 'auto'
     },
     containerButton: {
-        backgroundColor: theme.palette.common.colorButton,
+        // backgroundColor: theme.palette.common.colorButton,
         color: theme.palette.common.white,
     },
     dataGrid: {
