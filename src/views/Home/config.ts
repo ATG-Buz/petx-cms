@@ -6,7 +6,7 @@ export const dataMenu = [
         // icon: RentIcon,
         // iconWhite: RentIconWhite,
         title: "Thông tin - điều trị",
-        path: "/thong-tin-dieu-tri",
+        path: "/thong-tin-dieu-tri/kham-benh-moi",
         dataMenuChild: [
             {
                 id: 0,
@@ -33,7 +33,7 @@ export const dataMenu = [
         // icon: AccountIcon,
         // iconWhite: AccountIconWhite,
         title: "Cài đặt - Quản lý",
-        path: "/MemberProfile",
+        path: "/cai-dat-quan-ly/cai-dat-phong-kham",
         dataMenuChild: [
             {
                 id: 0,
@@ -193,38 +193,27 @@ export const dataMenu = [
         // icon: NotificationIcon,
         // iconWhite: NotificationIconWhite,
         title: "Nhập thuốc - Hàng Hoá",
-        path: "/AccountActivities",
+        path: "/nhap-thuoc-hang-hoa/nhap-hang-hoa-moi",
         dataMenuChild: [
             {
                 id: 0,
-                title: "Thông tin - điều trị",
-                path: "/nhap-thuoc-hang-hoa/thong-tin-dieu-tri",
+                title: "Nhập hàng hóa mới",
+                path: "/nhap-thuoc-hang-hoa/nhap-hang-hoa-moi",
                 icon: SubdirectoryArrowRightIcon
             },
             {
                 id: 1,
-                title: "Thông tin - điều trị",
-                path: "/nhap-thuoc-hang-hoa/thong-tin-dieu-tri",
+                title: "Danh sách nhập hàng hóa",
+                path: "/nhap-thuoc-hang-hoa/danh-sach-nhap-hang-hoa",
                 icon: SubdirectoryArrowRightIcon
             },
             {
                 id: 2,
-                title: "Thông tin - điều trị",
-                path: "/nhap-thuoc-hang-hoa/thong-tin-dieu-tri",
+                title: "Hàng đã nhập vào",
+                path: "/nhap-thuoc-hang-hoa/hang-da-nhap-vao",
                 icon: SubdirectoryArrowRightIcon
             },
-            {
-                id: 3,
-                title: "Thông tin - điều trị",
-                path: "/nhap-thuoc-hang-hoa/thong-tin-dieu-tri",
-                icon: SubdirectoryArrowRightIcon
-            },
-            {
-                id: 4,
-                title: "Thông tin - điều trị",
-                path: "/nhap-thuoc-hang-hoa/thong-tin-dieu-tri",
-                icon: SubdirectoryArrowRightIcon
-            },
+
         ]
     },
     {
@@ -232,36 +221,24 @@ export const dataMenu = [
         // icon: SupportIcon,
         // iconWhite: SupportIconWhite,
         title: "Kiểm kê kho hàng",
-        path: "/SupportCenter",
+        path: "/kiem-ke-kho-hang/kiem-ke-kho-hang",
         dataMenuChild: [
             {
                 id: 0,
-                title: "Thông tin - điều trị",
-                path: "/kiem-ke-kho-hang/thong-tin-dieu-tri",
+                title: "Kiểm kê kho hàng",
+                path: "/kiem-ke-kho-hang/kiem-ke-hang",
                 icon: SubdirectoryArrowRightIcon
             },
             {
                 id: 1,
-                title: "Thông tin - điều trị",
-                path: "/kiem-ke-kho-hang/thong-tin-dieu-tri",
+                title: "Thông tin hàng kiểm kê",
+                path: "/kiem-ke-kho-hang/thong-tin-hang-kiem-ke",
                 icon: SubdirectoryArrowRightIcon
             },
             {
                 id: 2,
-                title: "Thông tin - điều trị",
-                path: "/kiem-ke-kho-hang/thong-tin-dieu-tri",
-                icon: SubdirectoryArrowRightIcon
-            },
-            {
-                id: 3,
-                title: "Thông tin - điều trị",
-                path: "/kiem-ke-kho-hang/thong-tin-dieu-tri",
-                icon: SubdirectoryArrowRightIcon
-            },
-            {
-                id: 4,
-                title: "Thông tin - điều trị",
-                path: "/kiem-ke-kho-hang/thong-tin-dieu-tri",
+                title: "Hàng đã kiểm kê",
+                path: "/kiem-ke-kho-hang/hang-da-kiem-ke",
                 icon: SubdirectoryArrowRightIcon
             },
         ]

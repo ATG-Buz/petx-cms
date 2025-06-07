@@ -1,4 +1,4 @@
-import AppSvgIcon from "@/components/AppSvgIcon"
+import AppSvgIcon from "@/components/AppSvgIcon";
 import { ElementType, useState } from "react";
 import useStyles from "./AppButton.styles";
 import { Typography } from "@mui/material";
@@ -13,7 +13,8 @@ export type IconLabelProps = {
   styleLabel?: React.CSSProperties;
   fontSizeIcon?: "small" | "inherit" | "large" | "medium" | undefined;
   stroke?: string;
-}
+  iconPosition?: "left" | "right";
+};
 
 const AppButton = (props: IconLabelProps) => {
   const {
@@ -26,21 +27,22 @@ const AppButton = (props: IconLabelProps) => {
     styleIcon,
     styleLabel,
     stroke,
+    iconPosition,
     ...rest
-  } = props
+  } = props;
   const { classes, cx } = useStyles();
   const handleContainerClick = () => {
     if (onClick) {
       onClick(); // Gọi hàm onClick nếu nó được truyền vào
     }
   };
-  const isMedium = fontSizeIcon === "medium" ? classes.IconMenuMedium : classes.IconMenu
+  const isMedium =
+    fontSizeIcon === "medium" ? classes.IconMenuMedium : classes.IconMenu;
   const isSmall = fontSizeIcon === "small" ? classes.IconMenuSmall : isMedium;
 
   return (
     <>
-      <style>{
-        `
+      <style>{`
         .MuiGrid-root {
           padding: 0;
           margin-top: 0px;
@@ -55,26 +57,42 @@ const AppButton = (props: IconLabelProps) => {
           flex-direction: row;
           justify-content: center;
         }
-        `
-      }</style>
-      <div className={cx(classes.container, styleSvgIcon)} onClick={handleContainerClick}>
+        `}</style>
+      <div
+        className={cx(classes.container, styleSvgIcon)}
+        onClick={handleContainerClick}
+      >
         <div className={classes.content1} style={styleIcon}>
           {title && (
-            <div className={classes.content2} >
-              <span className={classes.titleH3} style={styleLabel}>{title}</span>
+            <div className={classes.content2}>
+              <span className={classes.titleH3} style={styleLabel}>
+                {title}
+              </span>
             </div>
           )}
-          {icon && <AppSvgIcon
-            component={icon}
-            strokeColor
-            color="inherit"
-            fontSize={fontSizeIcon || "large"}
-            className={isSmall}
-            style={{ stroke: stroke || 'inherit' }}
-          />}
+          {icon && iconPosition === "left" && (
+            <AppSvgIcon
+              component={icon}
+              strokeColor
+              color="inherit"
+              fontSize={fontSizeIcon || "large"}
+              className={isSmall}
+              style={{ stroke: stroke || "inherit", color: "white" }}
+            />
+          )}
+          {icon && iconPosition === "right" && (
+            <AppSvgIcon
+              component={icon}
+              strokeColor
+              color="inherit"
+              fontSize={fontSizeIcon || "large"}
+              className={isSmall}
+              style={{ stroke: stroke || "inherit", color: "white" }}
+            />
+          )}
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 export default AppButton;

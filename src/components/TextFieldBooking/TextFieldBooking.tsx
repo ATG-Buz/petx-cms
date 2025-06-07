@@ -1,20 +1,16 @@
 declare module "react" {
   function forwardRef<T, P = {}>(
-    render: (props: P, ref: React.Ref<T>) => React.ReactElement | null,
-  ): (props: P & React.RefAttributes<T>) => React.ReactElement | null
+    render: (props: P, ref: React.Ref<T>) => React.ReactElement | null
+  ): (props: P & React.RefAttributes<T>) => React.ReactElement | null;
 }
 
-import React, { ElementType, ReactNode } from "react"
-import InputAdornment from '@mui/material/InputAdornment';
-import IconButton from '@mui/material/IconButton';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import Visibility from '@mui/icons-material/Visibility';
+import React, { ElementType, ReactNode } from "react";
+import InputAdornment from "@mui/material/InputAdornment";
+import IconButton from "@mui/material/IconButton";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import Visibility from "@mui/icons-material/Visibility";
 
-import {
-  OutlinedInput,
-  OutlinedInputProps,
-  FormControl,
-} from "@mui/material"
+import { OutlinedInput, OutlinedInputProps, FormControl } from "@mui/material";
 import IconLabelMenu from "../IconLabelMenu";
 
 export type TextFieldBookingProps = {
@@ -28,22 +24,23 @@ export type TextFieldBookingProps = {
   parameter?: any;
   IconEndDisable?: boolean;
   IconStartDisable?: boolean;
-  inputValue?: string,
-  maxLength?: number,
-  onChange?: (text: string) => void,
-  labels?: string,
+  inputValue?: string;
+  maxLength?: number;
+  onChange?: (text: string) => void;
+  labels?: string;
   styleLabels?: React.CSSProperties;
   defaultValue?: any;
   labelDisabled?: boolean;
   modeInput?: boolean;
-  onKeyDown?: any,
-  labelRight?: string,
+  onKeyDown?: any;
+  labelRight?: string;
   styleLabelsRight?: React.CSSProperties;
-} & Omit<OutlinedInputProps, "margin" | "size">
+  fullWidth?: boolean;
+} & Omit<OutlinedInputProps, "margin" | "size">;
 
 const InnerTextFieldBooking = (
   props: TextFieldBookingProps,
-  ref: React.ForwardedRef<any>,
+  ref: React.ForwardedRef<any>
 ) => {
   const {
     id,
@@ -67,21 +64,37 @@ const InnerTextFieldBooking = (
     onKeyDown,
     labelRight,
     styleLabelsRight,
+    fullWidth,
     ...rest
-  } = props
+  } = props;
   const renderIconStart = () => {
-    if (IconStart && typeof IconStart === 'object') {
+    if (IconStart && typeof IconStart === "object") {
       return <React.Fragment>{IconStart}</React.Fragment>;
     }
-    return <IconLabelMenu
-      icon={IconStart as ElementType}
-      fontSizeIcon='medium'
-      styleSvgIcon={{ color: 'black' }}
-    />;
+    return (
+      <IconLabelMenu
+        icon={IconStart as ElementType}
+        fontSizeIcon="medium"
+        styleSvgIcon={{ color: "black" }}
+      />
+    );
   };
   return (
-    <FormControl style={style} variant="outlined">
-      {labels && <span style={styleLabels}>{labels}<span style={{ display: labelRight ? 'inline' : 'none', color: 'red', marginLeft: '4px' }}>{labelRight}</span></span>}
+    <FormControl style={style} variant="outlined" fullWidth={fullWidth}>
+      {labels && (
+        <span style={styleLabels}>
+          {labels}
+          <span
+            style={{
+              display: labelRight ? "inline" : "none",
+              color: "red",
+              marginLeft: "4px",
+            }}
+          >
+            {labelRight}
+          </span>
+        </span>
+      )}
       <OutlinedInput
         id="outlined-adornment-password"
         // type={type}
@@ -97,32 +110,30 @@ const InnerTextFieldBooking = (
                 aria-label="toggle password visibility"
                 onClick={onClick}
                 edge="end"
-                style={{ color: 'black' }}
+                style={{ color: "black" }}
               >
                 {parameter ? <VisibilityOff /> : <Visibility />}
               </IconButton>
             </InputAdornment>
           ) : null
-
         }
         startAdornment={
           IconStartDisable ? (
-            <InputAdornment position="start" style={{ color: 'black' }}>
+            <InputAdornment position="start" style={{ color: "black" }}>
               {/* {IconStart} */}
               {renderIconStart()}
             </InputAdornment>
           ) : null
-
         }
         placeholder={placeholder || " "}
-        inputMode={modeInput ? 'numeric' : 'text'}
+        inputMode={modeInput ? "numeric" : "text"}
         onKeyDown={onKeyDown}
-        style={{backgroundColor: 'white', borderRadius: '8px'}}
+        style={{ backgroundColor: "white", borderRadius: "8px" }}
       />
     </FormControl>
-  )
-}
+  );
+};
 
-const TextFieldBooking = React.forwardRef(InnerTextFieldBooking)
+const TextFieldBooking = React.forwardRef(InnerTextFieldBooking);
 
-export default TextFieldBooking
+export default TextFieldBooking;
