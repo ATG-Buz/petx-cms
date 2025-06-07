@@ -129,6 +129,7 @@ const InnerTextFieldBooking = (
         inputMode={modeInput ? "numeric" : "text"}
         onKeyDown={onKeyDown}
         style={{ backgroundColor: "white", borderRadius: "8px" }}
+        {...rest}
       />
     </FormControl>
   );

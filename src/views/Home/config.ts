@@ -350,36 +350,24 @@ export const dataMenu = [
         // icon: IcResetPassword,
         // iconWhite: IcResetPassword,
         title: "Tiện ích & Thông báo",
-        path: "/Resetpassword",
+        path: "/tien-ich-thong-bao/in-ma-vach",
         dataMenuChild: [
             {
                 id: 0,
-                title: "Thông tin - điều trị",
-                path: "/tien-ich-thong-bao/thong-tin-dieu-tri",
+                title: "In mã vạch",
+                path: "/tien-ich-thong-bao/in-ma-vach",
                 icon: SubdirectoryArrowRightIcon
             },
             {
                 id: 1,
-                title: "Thông tin - điều trị",
-                path: "/tien-ich-thong-bao/thong-tin-dieu-tri",
+                title: "Gửi thông báo hệ thống",
+                path: "/tien-ich-thong-bao/gui-thong-bao-he-thong",
                 icon: SubdirectoryArrowRightIcon
             },
             {
                 id: 2,
-                title: "Thông tin - điều trị",
-                path: "/tien-ich-thong-bao/thong-tin-dieu-tri",
-                icon: SubdirectoryArrowRightIcon
-            },
-            {
-                id: 3,
-                title: "Thông tin - điều trị",
-                path: "/tien-ich-thong-bao/thong-tin-dieu-tri",
-                icon: SubdirectoryArrowRightIcon
-            },
-            {
-                id: 4,
-                title: "Thông tin - điều trị",
-                path: "/tien-ich-thong-bao/thong-tin-dieu-tri",
+                title: "Xem thông báo đã gửi",
+                path: "/tien-ich-thong-bao/xem-thong-bao-da-gui",
                 icon: SubdirectoryArrowRightIcon
             },
         ]
@@ -389,36 +377,42 @@ export const dataMenu = [
         // icon: IcResetPassword,
         // iconWhite: IcResetPassword,
         title: "Kết toán - Thu chi",
-        path: "/Resetpassword",
+        path: "",
         dataMenuChild: [
             {
                 id: 0,
-                title: "Thông tin - điều trị",
-                path: "/ket-toan-thu-chi/thong-tin-dieu-tri",
+                title: "Tạo phiếu thu",
+                path: "/ket-toan-thu-chi/tao-phieu-thu",
                 icon: SubdirectoryArrowRightIcon
             },
             {
                 id: 1,
-                title: "Thông tin - điều trị",
-                path: "/ket-toan-thu-chi/thong-tin-dieu-tri",
+                title: "Tạo phiếu chi",
+                path: "/ket-toan-thu-chi/tao-phieu-chi",
                 icon: SubdirectoryArrowRightIcon
             },
             {
                 id: 2,
-                title: "Thông tin - điều trị",
-                path: "/ket-toan-thu-chi/thong-tin-dieu-tri",
+                title: "Danh sách phiếu thu",
+                path: "/ket-toan-thu-chi/danh-sach-phieu-thu",
                 icon: SubdirectoryArrowRightIcon
             },
             {
                 id: 3,
-                title: "Thông tin - điều trị",
-                path: "/ket-toan-thu-chi/thong-tin-dieu-tri",
+                title: "Danh sách phiếu chi",
+                path: "/ket-toan-thu-chi/danh-sach-phieu-chi",
                 icon: SubdirectoryArrowRightIcon
             },
             {
                 id: 4,
-                title: "Thông tin - điều trị",
-                path: "/ket-toan-thu-chi/thong-tin-dieu-tri",
+                title: "thu chi -Tổng hợp",
+                path: "/ket-toan-thu-chi/thu-chi-tong-hop",
+                icon: SubdirectoryArrowRightIcon
+            },
+            {
+                id: 5,
+                title: "Khôi phục xóa phiếu thu chi",
+                path: "/ket-toan-thu-chi/khoi-phuc-xoa-phieu-thu-chi",
                 icon: SubdirectoryArrowRightIcon
             },
         ]
