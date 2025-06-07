@@ -248,36 +248,12 @@ export const dataMenu = [
         // icon: IcResetPassword,
         // iconWhite: IcResetPassword,
         title: "Quản Lý công nợ",
-        path: "/Resetpassword",
+        path: "/quan-ly-cong-no",
         dataMenuChild: [
             {
                 id: 0,
-                title: "Thông tin - điều trị",
-                path: "/quan-ly-cong-no/thong-tin-dieu-tri",
-                icon: SubdirectoryArrowRightIcon
-            },
-            {
-                id: 1,
-                title: "Thông tin - điều trị",
-                path: "/quan-ly-cong-no/thong-tin-dieu-tri",
-                icon: SubdirectoryArrowRightIcon
-            },
-            {
-                id: 2,
-                title: "Thông tin - điều trị",
-                path: "/quan-ly-cong-no/thong-tin-dieu-tri",
-                icon: SubdirectoryArrowRightIcon
-            },
-            {
-                id: 3,
-                title: "Thông tin - điều trị",
-                path: "/quan-ly-cong-no/thong-tin-dieu-tri",
-                icon: SubdirectoryArrowRightIcon
-            },
-            {
-                id: 4,
-                title: "Thông tin - điều trị",
-                path: "/quan-ly-cong-no/thong-tin-dieu-tri",
+                title: "Quản lý công nợ",
+                path: "/quan-ly-cong-no",
                 icon: SubdirectoryArrowRightIcon
             },
         ]
