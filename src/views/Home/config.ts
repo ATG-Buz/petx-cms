@@ -263,36 +263,84 @@ export const dataMenu = [
         // icon: IcResetPassword,
         // iconWhite: IcResetPassword,
         title: "Thống kê - doanh số",
-        path: "/Resetpassword",
+        path: "/thong-ke-doanh-so",
         dataMenuChild: [
             {
                 id: 0,
-                title: "Thông tin - điều trị",
-                path: "/thong-ke-doanh-so/thong-tin-dieu-tri",
+                title: "Lời lỗ",
+                path: "/thong-ke-doanh-so/loi-lo",
                 icon: SubdirectoryArrowRightIcon
             },
             {
                 id: 1,
-                title: "Thông tin - điều trị",
-                path: "/thong-ke-doanh-so/thong-tin-dieu-tri",
+                title: "Thu chi điều trị",
+                path: "/thong-ke-doanh-so/thu-chi-dieu-tri",
                 icon: SubdirectoryArrowRightIcon
             },
             {
                 id: 2,
-                title: "Thông tin - điều trị",
-                path: "/thong-ke-doanh-so/thong-tin-dieu-tri",
+                title: "Thu chi bán hàng",
+                path: "/thong-ke-doanh-so/thu-chi-ban-hang",
                 icon: SubdirectoryArrowRightIcon
             },
             {
                 id: 3,
-                title: "Thông tin - điều trị",
-                path: "/thong-ke-doanh-so/thong-tin-dieu-tri",
+                title: "Xuất nhập tồn",
+                path: "/thong-ke-doanh-so/xuat-nhap-ton",
                 icon: SubdirectoryArrowRightIcon
             },
             {
                 id: 4,
-                title: "Thông tin - điều trị",
-                path: "/thong-ke-doanh-so/thong-tin-dieu-tri",
+                title: "Dịch vụ hàng hóa",
+                path: "/thong-ke-doanh-so/dich-vu-hang-hoa",
+                icon: SubdirectoryArrowRightIcon
+            },
+            {
+                id: 5,
+                title: "Điều trị theo bác sĩ",
+                path: "/thong-ke-doanh-so/dieu-tri-theo-bac-si",
+                icon: SubdirectoryArrowRightIcon
+            },
+            {
+                id: 6,
+                title: "Bán hàng theo bác sĩ",
+                path: "/thong-ke-doanh-so/ban-hang-theo-bac-si",
+                icon: SubdirectoryArrowRightIcon
+            },
+            {
+                id: 7,
+                title: "Chiết khấu bán hàng",
+                path: "/thong-ke-doanh-so/chiet-khau-ban-hang",
+                icon: SubdirectoryArrowRightIcon
+            },
+            {
+                id: 8,
+                title: "Thống kê hàng tồn kho",
+                path: "/thong-ke-doanh-so/thong-ke-hang-ton-kho",
+                icon: SubdirectoryArrowRightIcon
+            },
+            {
+                id: 9,
+                title: "Doanh số từ khách hàng",
+                path: "/thong-ke-doanh-so/doanh-so-tu-khach-hang",
+                icon: SubdirectoryArrowRightIcon
+            },
+            {
+                id: 10,
+                title: "Điểm tích lũy",
+                path: "/thong-ke-doanh-so/diem-tich-luy",
+                icon: SubdirectoryArrowRightIcon
+            },
+            {
+                id: 11,
+                title: "Hàng cận ngày",
+                path: "/thong-ke-doanh-so/hang-can-ngay",
+                icon: SubdirectoryArrowRightIcon
+            },
+            {
+                id: 12,
+                title: "Thống kê khách hàng",
+                path: "/thong-ke-doanh-so/thong-ke-khach-hang",
                 icon: SubdirectoryArrowRightIcon
             },
         ]
