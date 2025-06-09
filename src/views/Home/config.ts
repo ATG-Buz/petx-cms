@@ -424,36 +424,36 @@ export const dataMenu = [
         title: "Trợ giúp & sử dụng",
         path: "/Resetpassword",
         dataMenuChild: [
-            {
-                id: 0,
-                title: "Thông tin - điều trị",
-                path: "/tro-giup-su-dung/thong-tin-dieu-tri",
-                icon: SubdirectoryArrowRightIcon
-            },
-            {
-                id: 1,
-                title: "Thông tin - điều trị",
-                path: "/tro-giup-su-dung/thong-tin-dieu-tri",
-                icon: SubdirectoryArrowRightIcon
-            },
-            {
-                id: 2,
-                title: "Thông tin - điều trị",
-                path: "/tro-giup-su-dung/thong-tin-dieu-tri",
-                icon: SubdirectoryArrowRightIcon
-            },
-            {
-                id: 3,
-                title: "Thông tin - điều trị",
-                path: "/tro-giup-su-dung/thong-tin-dieu-tri",
-                icon: SubdirectoryArrowRightIcon
-            },
-            {
-                id: 4,
-                title: "Thông tin - điều trị",
-                path: "/tro-giup-su-dung/thong-tin-dieu-tri",
-                icon: SubdirectoryArrowRightIcon
-            },
+            // {
+            //     id: 0,
+            //     title: "Thông tin - điều trị",
+            //     path: "/tro-giup-su-dung/thong-tin-dieu-tri",
+            //     icon: SubdirectoryArrowRightIcon
+            // },
+            // {
+            //     id: 1,
+            //     title: "Thông tin - điều trị",
+            //     path: "/tro-giup-su-dung/thong-tin-dieu-tri",
+            //     icon: SubdirectoryArrowRightIcon
+            // },
+            // {
+            //     id: 2,
+            //     title: "Thông tin - điều trị",
+            //     path: "/tro-giup-su-dung/thong-tin-dieu-tri",
+            //     icon: SubdirectoryArrowRightIcon
+            // },
+            // {
+            //     id: 3,
+            //     title: "Thông tin - điều trị",
+            //     path: "/tro-giup-su-dung/thong-tin-dieu-tri",
+            //     icon: SubdirectoryArrowRightIcon
+            // },
+            // {
+            //     id: 4,
+            //     title: "Thông tin - điều trị",
+            //     path: "/tro-giup-su-dung/thong-tin-dieu-tri",
+            //     icon: SubdirectoryArrowRightIcon
+            // },
         ]
     },
 ]

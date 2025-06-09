@@ -50,7 +50,8 @@
     "slick-carousel": "^1.8.1",
     "tss-react": "^4.9.4",
     "url-loader": "^4.1.1",
-    "xlsx": "^0.18.5"
+    "xlsx": "^0.18.5",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@types/aos": "^3.0.7",

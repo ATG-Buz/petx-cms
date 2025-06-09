@@ -111,8 +111,18 @@ const InnerTextFieldBooking = (
                 onClick={onClick}
                 edge="end"
                 style={{ color: "black" }}
+                sx={{
+                  "& .MuiSvgIcon-root": {
+                    width: "16px",
+                    height: "16px",
+                  },
+                }}
               >
-                {parameter ? <VisibilityOff /> : <Visibility />}
+                {parameter ? (
+                  <VisibilityOff style={{ color: "black" }} />
+                ) : (
+                  <Visibility style={{ color: "black" }} />
+                )}
               </IconButton>
             </InputAdornment>
           ) : null

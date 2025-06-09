@@ -1,119 +1,120 @@
-import React, { useState } from 'react';
-import useStyles from './login.styles';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Image from "next/image"
-import Slider from 'react-slick';
-import TextFieldBooking from '@/components/TextFieldBooking/TextFieldBooking';
-import { useMediaQuery } from '@mui/material';
-import { toast } from "react-toastify"
+import React, { useState } from "react";
+import useStyles from "./login.styles";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+const Slider = require("react-slick").default;
+import "react-slick/dist/react-slick";
+import TextFieldBooking from "@/components/TextFieldBooking/TextFieldBooking";
+import { useMediaQuery } from "@mui/material";
+import { toast } from "react-toastify";
 import { useFormik } from "formik";
-import Link from 'next/link';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Button from '@mui/material/Button';
-import { useTranslation } from 'next-i18next';
-import { ReactComponent as IconEmailOutline } from '@/assets/icons/email-ouline-black.svg';
-import { ReactComponent as IconPassWorkOutline } from '@/assets/icons/passWord-outLine.svg';
-import { gotoPage } from '@/utils/helpers/common';
-import { LoginApi } from '@/utils/api'
+import Link from "next/link";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import Button from "@mui/material/Button";
+import { useTranslation } from "next-i18next";
+import { ReactComponent as IconEmailOutline } from "@/assets/icons/email-ouline-black.svg";
+import { ReactComponent as IconPassWorkOutline } from "@/assets/icons/passWord-outLine.svg";
+import { gotoPage } from "@/utils/helpers/common";
+import { LoginApi } from "@/utils/api";
+import * as Yup from "yup";
 
 const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    appendDots: (dots: any) => (
-      <div
-        style={{
-          borderRadius: "10px",
-          padding: "10px",
-          marginTop: "10px",
-        }}
-      >
-        <ul style={{ margin: "0px" }}> {dots} </ul>
-      </div>
-    ),
-    customPaging: (i: any) => (
-      <div
-        style={{
-          width: "16px",
-          height: "16px",
-          backgroundColor: "#5B5B5B",
-          borderRadius: "60%",
-        }}
-        className="dots-slider"
-      >
-      </div>
-    )
-  };
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  appendDots: (dots: any) => (
+    <div
+      style={{
+        borderRadius: "10px",
+        padding: "10px",
+        marginTop: "10px",
+      }}
+    >
+      <ul style={{ margin: "0px" }}> {dots} </ul>
+    </div>
+  ),
+  customPaging: (i: any) => (
+    <div
+      style={{
+        width: "16px",
+        height: "16px",
+        backgroundColor: "#5B5B5B",
+        borderRadius: "60%",
+      }}
+      className="dots-slider"
+    ></div>
+  ),
+};
 
 const Login = () => {
   const { classes } = useStyles();
   const [isLogin, setIsLogin] = useState(false);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const isMb = useMediaQuery('(max-width:899px)');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const isMb = useMediaQuery("(max-width:899px)");
   const { t } = useTranslation();
   const [showPassword, setShowPassword] = React.useState(true);
   const [formSubmitted, setFormSubmitted] = useState(0);
 
-  const dataImage= [
+  const dataImage = [
     {
-        id: 0,
-        path: '/image/login/login-1.webp'
+      id: 0,
+      path: "/image/login/login-1.webp",
     },
     {
-        id: 1,
-        path: '/image/login/login-2.webp'
+      id: 1,
+      path: "/image/login/login-2.webp",
     },
     {
-        id: 2,
-        path: '/image/login/login-3.webp'
+      id: 2,
+      path: "/image/login/login-3.webp",
     },
-  ]
+  ];
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
-  
 
   const initialValues = {
     email: "",
     password: "",
   };
-  const { values, handleSubmit, handleChange, errors } = useFormik(
-    {
-      initialValues,
-    //   validationSchema: validationSchema,
-      onSubmit: () => onSubmit(),
-    }
-  );
+  const { values, handleSubmit, handleChange, errors } = useFormik({
+    initialValues,
+    validationSchema: Yup.object().shape({
+      email: Yup.string()
+        .email("Email không hợp lệ")
+        .required("Email là bắt buộc"),
+      password: Yup.string().required("Mật khẩu là bắt buộc"),
+    }),
+    onSubmit: () => onSubmit(),
+  });
 
-  const handleKeyDown = (event: { key: string; }) => {
-    if (event.key === 'Enter') {
-      onSubmit()
+  const handleKeyDown = (event: { key: string }) => {
+    if (event.key === "Enter") {
+      onSubmit();
     }
   };
 
   const onSubmit = async () => {
     const body = {
-        email: values.email,
+      email: values.email,
       password: values.password,
     };
     try {
       const res = await LoginApi.postLogin({
-        params: body
-      })
+        params: body,
+      });
       if (res.data.status === 200) {
-        toast.success(`${t('login success')}`)
-        localStorage.setItem('email-petX', res.data.data.email)
-        localStorage.setItem('phone-petX', res.data.data.phone)
-      }
-      else {
-        toast.error(`${t('Username or password is incorrect')}`);
+        toast.success(`${t("Đăng nhập thành công")}`);
+        localStorage.setItem("email-petX", res.data.data.email);
+        // localStorage.setItem("phone-petX", res.data.data.phone);
+      } else {
+        toast.error(`${t("email hoặc mật khẩu không đúng")}`);
       }
     } catch (err) {
-      toast.error(`${t('Username or password is incorrect')}`);
+      toast.error(`${t("email hoặc mật khẩu không đúng")}`);
     }
   };
 
@@ -123,12 +124,12 @@ const Login = () => {
         <Box
           sx={{
             flexGrow: 1,
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            height: 'calc(var(--1dvh, 1vh) * 100)',
-            backgroundColor: 'rgba(243, 112, 33, 1)'
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "calc(var(--1dvh, 1vh) * 100)",
+            backgroundColor: "rgba(243, 112, 33, 1)",
           }}
         >
           <div className={classes.container}>
@@ -160,25 +161,35 @@ const Login = () => {
                   }
             `}
             </style>
-            {!isMb && <Slider {...settings} className={classes.containerSlider} autoplay>
-              {dataImage.map((item) => (
-                <div key={item.id}>
-                  <img
-                    src={item.path}
-                    alt={''}
-                    className={classes.imgSlider}
-                  />
-                </div>
-              ))}
-            </Slider>}
+            {!isMb && (
+              <Slider
+                {...settings}
+                className={classes.containerSlider}
+                autoplay
+              >
+                {dataImage.map((item) => (
+                  <div key={item.id}>
+                    <img
+                      src={item.path}
+                      alt={""}
+                      className={classes.imgSlider}
+                    />
+                  </div>
+                ))}
+              </Slider>
+            )}
             <div className={classes.contentForm}>
               <div className={classes.contentFormRight}>
-                <img src={'/image/logo/logo.webp'} alt='' className={classes.imgLogo} />
-                <span className={classes.titleH1}>{t('SIGN IN')}</span>
-                <p className={classes.titleTextField}>{t('Email')}</p>
+                <img
+                  src={"/image/logo/logo.webp"}
+                  alt=""
+                  className={classes.imgLogo}
+                />
+                {/* <span className={classes.titleH1}>{t("Đăng nhập")}</span> */}
+                <p className={classes.titleTextField}>{t("Email")}</p>
                 <TextFieldBooking
                   id="email"
-                  placeholder={`${t('Email')}`}
+                  placeholder={`${t("Email")}`}
                   name="email"
                   type="text"
                   IconStart={<IconEmailOutline />}
@@ -190,10 +201,13 @@ const Login = () => {
                   style={{ width: "70%" }}
                   onKeyDown={handleKeyDown}
                 />
-                <p className={classes.titleTextField}>{t('PassWord')}</p>
+                {errors.email && (
+                  <span className={classes.textError}>{errors.email}</span>
+                )}
+                <p className={classes.titleTextField}>{t("Mật khẩu")}</p>
                 <TextFieldBooking
                   id="password"
-                  placeholder={`${t('PassWord')}`}
+                  placeholder={`${t("Mật khẩu")}`}
                   name="password"
                   type={showPassword ? "password" : "text"}
                   IconStart={<IconPassWorkOutline />}
@@ -206,41 +220,68 @@ const Login = () => {
                   style={{ width: "70%" }}
                   onKeyDown={handleKeyDown}
                 />
+                {errors.password && (
+                  <span className={classes.textError}>{errors.password}</span>
+                )}
                 <div className={classes.content2}>
-                  {!isMb ? <FormControlLabel control={<Checkbox />} label={`${t('Remember me')}`} className={classes.textCheckBox} /> : null}
-                  <Link href='/ResetPassword' className={classes.textForgot}>
-                    {t('Forgot password?')}
+                  {!isMb ? (
+                    <FormControlLabel
+                      control={<Checkbox />}
+                      label={`${t("Ghi nhớ tôi")}`}
+                      className={classes.textCheckBox}
+                    />
+                  ) : null}
+                  <Link href="/ResetPassword" className={classes.textForgot}>
+                    {t("Quên mật khẩu?")}
                   </Link>
                 </div>
-                <Button variant="contained"
+                <Button
+                  variant="contained"
                   className={classes.buttonSignIn}
-                  type='submit'
+                  type="submit"
                   onKeyDown={handleKeyDown}
-                  onClick={() => { handleSubmit(), setFormSubmitted(formSubmitted + 1) }}
+                  onClick={() => {
+                    handleSubmit(), setFormSubmitted(formSubmitted + 1);
+                  }}
                 >
-                  {t('Sign in')}
+                  {t("Đăng nhập")}
                 </Button>
                 <div className={classes.content3}>
-                  <p className={classes.text}>{t('Don’t have an account?')}</p>
-                  <span className={classes.textContact}
+                  <p className={classes.text}>{t("Không có tài khoản?")}</p>
+                  <span
+                    className={classes.textContact}
                     onClick={() => {
-                      gotoPage('/'), localStorage.setItem("menuData", JSON.stringify({
-                        id: "leasingEnquiry",
-                        name: "Leasing Enquiry",
-                      },));
+                      gotoPage("/"),
+                        localStorage.setItem(
+                          "menuData",
+                          JSON.stringify({
+                            id: "leasingEnquiry",
+                            name: "Leasing Enquiry",
+                          })
+                        );
                     }}
-                  >{t('Contact us')}</span>
+                  >
+                    {t("Liên hệ")}
+                  </span>
                 </div>
               </div>
             </div>
           </div>
           <Grid container spacing={isMb ? 0 : 2} className={classes.content4}>
-            <Grid item xs={isMb ? 0 : 7.25} style={{ backgroundColor: "white", height: "100%" }}>
-            </Grid>
-            <Grid item xs={isMb ? 12 : 4.75} style={{ backgroundColor: "rgba(243, 112, 33, 1)", height: "100%" }}>
-            </Grid>
+            <Grid
+              item
+              xs={isMb ? 0 : 7.25}
+              style={{ backgroundColor: "white", height: "100%" }}
+            ></Grid>
+            <Grid
+              item
+              xs={isMb ? 12 : 4.75}
+              style={{
+                backgroundColor: "rgba(243, 112, 33, 1)",
+                height: "100%",
+              }}
+            ></Grid>
           </Grid>
-
         </Box>
       )}
     </>
