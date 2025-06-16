@@ -1,12 +1,8 @@
-import { CancelToken } from "axios";
 
-type Payload = {
-  headers?: string | undefined;
-}
 export type PostLoginPayLoad = {
-  params: {
-  };
-} & Payload;
+  email: string;
+  password: string;
+};
 
 export type LoginType = {
   sub: number;

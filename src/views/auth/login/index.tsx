@@ -101,9 +101,7 @@ const Login = () => {
       password: values.password,
     };
     try {
-      const res = await LoginApi.postLogin({
-        params: body
-      })
+      const res = await LoginApi.postLogin(body)
       if (res.data.status === 200) {
         toast.success(`${t('login success')}`)
         localStorage.setItem('email-petX', res.data.data.email)
