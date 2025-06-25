@@ -38,6 +38,8 @@ import {
 
 import "@/assets/scss/app.scss";
 import React from "react"
+import { Provider } from "react-redux"
+import store from "@/utils/store"
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (
@@ -179,6 +181,7 @@ const MyApp: React.FunctionComponent<MyAppProps> = props => {
         <TssCacheProvider value={emotionCacheApp}>
           <ThemeProvider theme={themeWithLocale}>
             <AOSProvider>
+              <Provider store={store}>
               <main className={`${BebasNeue.variable}`}>
                 <RouterLoadingLinearProgress />
                 <CssBaseline />
@@ -196,6 +199,7 @@ const MyApp: React.FunctionComponent<MyAppProps> = props => {
                   closeOnClick
                 />
               </main>
+              </Provider>
             </AOSProvider>
           </ThemeProvider>
         </TssCacheProvider>

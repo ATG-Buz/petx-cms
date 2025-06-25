@@ -5,7 +5,7 @@ import Grid from '@mui/material/Grid';
 import Image from "next/image"
 import Slider from 'react-slick';
 import TextFieldBooking from '@/components/TextFieldBooking/TextFieldBooking';
-import { useMediaQuery } from '@mui/material';
+import { CircularProgress, useMediaQuery } from '@mui/material';
 import { toast } from "react-toastify"
 import { useFormik } from "formik";
 import Link from 'next/link';
@@ -17,65 +17,68 @@ import { ReactComponent as IconEmailOutline } from '@/assets/icons/email-ouline-
 import { ReactComponent as IconPassWorkOutline } from '@/assets/icons/passWord-outLine.svg';
 import { gotoPage } from '@/utils/helpers/common';
 import { LoginApi } from '@/utils/api'
+import { setUser } from '@/utils/store/slices/userSlices';
+import { useDispatch } from 'react-redux';
+import { Backdrop } from '@mui/material';
 
 const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    appendDots: (dots: any) => (
-      <div
-        style={{
-          borderRadius: "10px",
-          padding: "10px",
-          marginTop: "10px",
-        }}
-      >
-        <ul style={{ margin: "0px" }}> {dots} </ul>
-      </div>
-    ),
-    customPaging: (i: any) => (
-      <div
-        style={{
-          width: "16px",
-          height: "16px",
-          backgroundColor: "#5B5B5B",
-          borderRadius: "60%",
-        }}
-        className="dots-slider"
-      >
-      </div>
-    )
-  };
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  appendDots: (dots: any) => (
+    <div
+      style={{
+        borderRadius: "10px",
+        padding: "10px",
+        marginTop: "10px",
+      }}
+    >
+      <ul style={{ margin: "0px" }}> {dots} </ul>
+    </div>
+  ),
+  customPaging: (i: any) => (
+    <div
+      style={{
+        width: "16px",
+        height: "16px",
+        backgroundColor: "#5B5B5B",
+        borderRadius: "60%",
+      }}
+      className="dots-slider"
+    >
+    </div>
+  )
+};
 
 const Login = () => {
   const { classes } = useStyles();
   const [isLogin, setIsLogin] = useState(false);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const isMb = useMediaQuery('(max-width:899px)');
   const { t } = useTranslation();
   const [showPassword, setShowPassword] = React.useState(true);
   const [formSubmitted, setFormSubmitted] = useState(0);
+  const dispatch = useDispatch();
 
-  const dataImage= [
+  const dataImage = [
     {
-        id: 0,
-        path: '/image/login/login-1.webp'
+      id: 0,
+      path: '/image/login/login-1.webp'
     },
     {
-        id: 1,
-        path: '/image/login/login-2.webp'
+      id: 1,
+      path: '/image/login/login-2.webp'
     },
     {
-        id: 2,
-        path: '/image/login/login-3.webp'
+      id: 2,
+      path: '/image/login/login-3.webp'
     },
   ]
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
-  
+
 
   const initialValues = {
     email: "",
@@ -84,7 +87,7 @@ const Login = () => {
   const { values, handleSubmit, handleChange, errors } = useFormik(
     {
       initialValues,
-    //   validationSchema: validationSchema,
+      //   validationSchema: validationSchema,
       onSubmit: () => onSubmit(),
     }
   );
@@ -96,8 +99,9 @@ const Login = () => {
   };
 
   const onSubmit = async () => {
+    setIsLoading(true);
     const body = {
-        email: values.email,
+      email: values.email,
       password: values.password,
     };
     try {
@@ -106,6 +110,8 @@ const Login = () => {
         toast.success(`${t('login success')}`)
         localStorage.setItem('email-petX', res.data.data.email)
         localStorage.setItem('phone-petX', res.data.data.phone)
+        dispatch(setUser(res.data.data))
+        gotoPage("/")
       }
       else {
         toast.error(`${t('Username or password is incorrect')}`);
@@ -113,6 +119,7 @@ const Login = () => {
     } catch (err) {
       toast.error(`${t('Username or password is incorrect')}`);
     }
+    setIsLoading(false);
   };
 
   return (
@@ -153,7 +160,7 @@ const Login = () => {
                     line-height: 16px!important;
                   }
                   .MuiInputBase-input{
-                    height: 22px !important;
+                    height: 40px !important;
                     padding: 0px;
                   }
             `}
@@ -241,6 +248,13 @@ const Login = () => {
 
         </Box>
       )}
+      <Backdrop
+        sx={(theme) => ({ color: '#fff', zIndex: theme.zIndex.drawer + 1 })}
+        open={isLoading}
+        onClick={() => { }}
+      >
+        <CircularProgress color="inherit" />
+      </Backdrop>
     </>
   );
 };

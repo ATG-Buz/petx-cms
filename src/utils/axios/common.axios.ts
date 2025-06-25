@@ -14,10 +14,10 @@ const commonAxios = axios.create({
 
 commonAxios.interceptors.request.use(
   (req) => {
-    if (!req['headers'].Language) {
-      const language = "vi";
-      req['headers'].Language = language;
-    }
+    // if (!req['headers'].Language) {
+    //   const language = "vi";
+    //   req['headers'].Language = language;
+    // }
 
     switch ((req.method as string).toUpperCase()) {
       case "GET": {

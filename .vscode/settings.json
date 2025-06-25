@@ -11,5 +11,8 @@
   "editor.wordWrapColumn": 100,
   "terminal.integrated.fontSize": 11,
   "editor.fontSize": 14,
-  "cSpell.words": []
+  "cSpell.words": [],
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
 }
